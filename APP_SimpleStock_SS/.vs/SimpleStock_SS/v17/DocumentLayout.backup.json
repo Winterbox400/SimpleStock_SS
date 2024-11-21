@@ -1,14 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\winterbox400\\Programacion\\Mis programas en VisualBasic_DotNet\\SimpleStock_SS\\",
+  "WorkspaceRootPath": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|c:\\winterbox400\\programacion\\mis programas en visualbasic_dotnet\\simplestock_ss\\simplestock_ss\\dao\\dbconnection.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\dao\\dbconnection.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|c:\\winterbox400\\proyectosserios\\repositoriosimplestock_ss\\app_simplestock_ss\\simplestock_ss\\visualforms\\frmmarcaproductos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\visualforms\\frmmarcaproductos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|C:\\winterbox400\\Programacion\\Mis programas en VisualBasic_DotNet\\SimpleStock_SS\\simplestock_ss\\visualforms\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\visualforms\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\simplestock_ss\\visualforms\\frmmarcaproductos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\visualforms\\frmmarcaproductos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\simplestock_ss\\visualforms\\home.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\visualforms\\home.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\simplestock_ss\\utilidades\\modobjectform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\utilidades\\modobjectform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\simplestock_ss\\visualforms\\home.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\visualforms\\home.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,31 +30,70 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DBConnection.vb",
-              "DocumentMoniker": "C:\\winterbox400\\Programacion\\Mis programas en VisualBasic_DotNet\\SimpleStock_SS\\SimpleStock_SS\\DAO\\DBConnection.vb",
-              "RelativeDocumentMoniker": "SimpleStock_SS\\DAO\\DBConnection.vb",
-              "ToolTip": "C:\\winterbox400\\Programacion\\Mis programas en VisualBasic_DotNet\\SimpleStock_SS\\SimpleStock_SS\\DAO\\DBConnection.vb",
-              "RelativeToolTip": "SimpleStock_SS\\DAO\\DBConnection.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABNAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ModObjectForm.vb",
+              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\Utilidades\\ModObjectForm.vb",
+              "RelativeDocumentMoniker": "SimpleStock_SS\\Utilidades\\ModObjectForm.vb",
+              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\Utilidades\\ModObjectForm.vb",
+              "RelativeToolTip": "SimpleStock_SS\\Utilidades\\ModObjectForm.vb",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowDwAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-10-26T03:34:47.549Z",
+              "WhenOpened": "2024-11-20T01:47:49.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\winterbox400\\Programacion\\Mis programas en VisualBasic_DotNet\\SimpleStock_SS\\SimpleStock_SS\\VisualForms\\Form1.vb",
-              "RelativeDocumentMoniker": "SimpleStock_SS\\VisualForms\\Form1.vb",
-              "ToolTip": "C:\\winterbox400\\Programacion\\Mis programas en VisualBasic_DotNet\\SimpleStock_SS\\SimpleStock_SS\\VisualForms\\Form1.vb [Dise\u00F1o]",
-              "RelativeToolTip": "SimpleStock_SS\\VisualForms\\Form1.vb [Dise\u00F1o]",
+              "Title": "FrmMarcaProductos.vb",
+              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\FrmMarcaProductos.vb",
+              "RelativeDocumentMoniker": "SimpleStock_SS\\VisualForms\\FrmMarcaProductos.vb",
+              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\FrmMarcaProductos.vb",
+              "RelativeToolTip": "SimpleStock_SS\\VisualForms\\FrmMarcaProductos.vb",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowCoAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-10-26T03:30:41.022Z"
+              "WhenOpened": "2024-11-20T00:19:23.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmMarcaProductos.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\FrmMarcaProductos.vb",
+              "RelativeDocumentMoniker": "SimpleStock_SS\\VisualForms\\FrmMarcaProductos.vb",
+              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\FrmMarcaProductos.vb [Dise\u00F1o]",
+              "RelativeToolTip": "SimpleStock_SS\\VisualForms\\FrmMarcaProductos.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-11-20T00:08:28.671Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Home.vb",
+              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\Home.vb",
+              "RelativeDocumentMoniker": "SimpleStock_SS\\VisualForms\\Home.vb",
+              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\Home.vb",
+              "RelativeToolTip": "SimpleStock_SS\\VisualForms\\Home.vb",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowB0AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-11-19T05:16:56.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Home.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\Home.vb",
+              "RelativeDocumentMoniker": "SimpleStock_SS\\VisualForms\\Home.vb",
+              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\Home.vb [Dise\u00F1o]",
+              "RelativeToolTip": "SimpleStock_SS\\VisualForms\\Home.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-11-19T05:08:20.608Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

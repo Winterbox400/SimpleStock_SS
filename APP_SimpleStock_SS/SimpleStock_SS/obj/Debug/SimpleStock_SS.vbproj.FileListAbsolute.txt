@@ -1,0 +1,13 @@
+C:\winterbox400\ProyectosSerios\RepositorioSimpleStock_SS\APP_SimpleStock_SS\SimpleStock_SS\bin\Debug\SimpleStock_SS.exe.config
+C:\winterbox400\ProyectosSerios\RepositorioSimpleStock_SS\APP_SimpleStock_SS\SimpleStock_SS\bin\Debug\SimpleStock_SS.exe
+C:\winterbox400\ProyectosSerios\RepositorioSimpleStock_SS\APP_SimpleStock_SS\SimpleStock_SS\bin\Debug\SimpleStock_SS.pdb
+C:\winterbox400\ProyectosSerios\RepositorioSimpleStock_SS\APP_SimpleStock_SS\SimpleStock_SS\bin\Debug\SimpleStock_SS.xml
+C:\winterbox400\ProyectosSerios\RepositorioSimpleStock_SS\APP_SimpleStock_SS\SimpleStock_SS\obj\Debug\SimpleStock_SS.vbproj.AssemblyReference.cache
+C:\winterbox400\ProyectosSerios\RepositorioSimpleStock_SS\APP_SimpleStock_SS\SimpleStock_SS\obj\Debug\SimpleStock_SS.Resources.resources
+C:\winterbox400\ProyectosSerios\RepositorioSimpleStock_SS\APP_SimpleStock_SS\SimpleStock_SS\obj\Debug\SimpleStock_SS.Home.resources
+C:\winterbox400\ProyectosSerios\RepositorioSimpleStock_SS\APP_SimpleStock_SS\SimpleStock_SS\obj\Debug\SimpleStock_SS.vbproj.GenerateResource.cache
+C:\winterbox400\ProyectosSerios\RepositorioSimpleStock_SS\APP_SimpleStock_SS\SimpleStock_SS\obj\Debug\SimpleStock_SS.vbproj.CoreCompileInputs.cache
+C:\winterbox400\ProyectosSerios\RepositorioSimpleStock_SS\APP_SimpleStock_SS\SimpleStock_SS\obj\Debug\SimpleStock_SS.exe
+C:\winterbox400\ProyectosSerios\RepositorioSimpleStock_SS\APP_SimpleStock_SS\SimpleStock_SS\obj\Debug\SimpleStock_SS.xml
+C:\winterbox400\ProyectosSerios\RepositorioSimpleStock_SS\APP_SimpleStock_SS\SimpleStock_SS\obj\Debug\SimpleStock_SS.pdb
+C:\winterbox400\ProyectosSerios\RepositorioSimpleStock_SS\APP_SimpleStock_SS\SimpleStock_SS\obj\Debug\SimpleStock_SS.FrmMarcaProductos.resources

@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DBConnection.vb" />
+    <Compile Include="Utilidades\ModObjectForm.vb" />
     <Compile Include="VisualForms\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +86,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -96,6 +98,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="VisualForms\FrmMarcaProductos.Designer.vb">
+      <DependentUpon>FrmMarcaProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VisualForms\FrmMarcaProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualForms\Home.Designer.vb">
+      <DependentUpon>Home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VisualForms\Home.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -103,6 +117,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualForms\FrmMarcaProductos.resx">
+      <DependentUpon>FrmMarcaProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualForms\Home.resx">
+      <DependentUpon>Home.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -117,8 +137,6 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Utilidades\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
