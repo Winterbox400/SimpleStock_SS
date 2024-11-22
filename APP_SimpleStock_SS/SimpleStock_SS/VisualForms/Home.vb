@@ -24,14 +24,28 @@
 
     '/*=================================ZONA DE BOTONES================================*/
     Private Sub BtnMarcaProductos_Click(sender As Object, e As EventArgs) Handles BtnMarcaProductos.Click
-        Dim form As FrmMarcaProductos = FrmMarcaProductos.InstanciaMarcaProductos 'Crea una variable de la instancia singleton
-        form.Owner = Me 'Hace a la instancia del Formulario Marca Productos hija de Home
-        form.Show() ' Muestra el formulario en la pantalla
-        form.BringToFront() ' Manda el formulario enfrente del padre (Home)
+        FrmProveedoresProductos.InstanciaProveedorProducto.Hide()
+
+        Dim formMarca As FrmMarcaProductos = FrmMarcaProductos.InstanciaMarcaProductos 'Crea una variable de la instancia singleton
+        formMarca.Owner = Me 'Hace a la instancia del Formulario Marca Productos hija de Home
+        formMarca.Show() ' Muestra el formulario en la pantalla
+        formMarca.BringToFront() ' Manda el formulario enfrente del padre (Home)
 
     End Sub
+
+    Private Sub BtnProveedoresProductos_Click(sender As Object, e As EventArgs) Handles BtnProveedoresProductos.Click
+        FrmMarcaProductos.InstanciaMarcaProductos.Hide()
+
+        Dim formProveedor As FrmProveedoresProductos = FrmProveedoresProductos.InstanciaProveedorProducto 'Crea una variable de la instancia singleton
+        formProveedor.Owner = Me 'Hace a la instancia del Formulario Proveedor Productos hija de Home
+        formProveedor.Show() ' Muestra el formulario en la pantalla
+        formProveedor.BringToFront() ' Manda el formulario enfrente del padre (Home)
+    End Sub
+
 
     Private Sub BtnCategoriaProducto_Click(sender As Object, e As EventArgs) Handles BtnCategoriaProducto.Click
         FrmMarcaProductos.InstanciaMarcaProductos.Hide() 'Oculta la ventana FrmMarcaProducto
     End Sub
+
+
 End Class

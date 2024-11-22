@@ -58,10 +58,23 @@ FechaActualizacion DATETIME NULL--FinPistasAuditoria
 )
 GO
 
-CREATE TABLE TipoEntradaSalida(
+CREATE TABLE TipoEntradaSalida(--Compra, Venta, Devolucion sobre compra, Devolución sobre venta
 IdTipo INT PRIMARY KEY IDENTITY,
 Tipo VARCHAR(20) NOT NULL,
 Descripcion VARCHAR(250) NOT NULL,
+Activo BIT NOT NULL,--InicioPistasAuditoria
+IdUsuarioRegistro INT NOT NULL,
+FechaRegistro DATETIME NOT NULL,
+IdUsuarioActualiza INT NULL,
+FechaActualizacion DATETIME NULL--FinPistasAuditoria
+)
+GO
+
+CREATE TABLE Clientes(
+IdCliente INT PRIMARY KEY IDENTITY,
+Nombre VARCHAR(50) NOT NULL,
+Telefono VARCHAR(15) NOT NULL,
+Correo VARCHAR(100) NOT NULL,
 Activo BIT NOT NULL,--InicioPistasAuditoria
 IdUsuarioRegistro INT NOT NULL,
 FechaRegistro DATETIME NOT NULL,
@@ -87,6 +100,7 @@ CREATE TABLE RegistroSalidas(
 IdRegistroSalida INT PRIMARY KEY IDENTITY,
 FechaSalida DATETIME NOT NULL,
 IdTipo INT FOREIGN KEY REFERENCES TipoEntradaSalida(IdTipo),
+IdCliente INT FOREIGN KEY REFERENCES Clientes(IdCliente),
 Descripcion VARCHAR(250) NOT NULL,
 Activo BIT NOT NULL,--InicioPistasAuditoria
 IdUsuarioRegistro INT NOT NULL,
@@ -122,11 +136,25 @@ FechaActualizacion DATETIME NULL--FinPistasAuditoria
 )
 GO
 
+CREATE TABLE Roles(
+IdRol INT PRIMARY KEY IDENTITY,
+Rol VARCHAR(20) NOT NULL
+)
+GO
+
+CREATE TABLE Usuarios(
+IdUsuario INT PRIMARY KEY IDENTITY,
+Nombre VARCHAR(50) NOT NULL,
+IdRol INT FOREIGN KEY REFERENCES Roles(IdRol)
+)
+GO
+
 CREATE TABLE MovimientosInventario(
 IdMovimientoInventario INT PRIMARY KEY IDENTITY,
 TipoMovimiento BIT NOT NULL, -- 1 será entrada, 0 será salida
 IdDetalleRegistroEntrada INT FOREIGN KEY REFERENCES DetalleRegistroEntrada(IdDetalleRegistroEntrada) NULL,
 IdDetalleRegistroSalida INT FOREIGN KEY REFERENCES DetalleRegistroSalida(IdDetalleRegistroSalida) NULL,
+IdUsuario INT FOREIGN KEY REFERENCES Usuarios(IdUsuario),
 Activo BIT NOT NULL,--InicioPistasAuditoria
 IdUsuarioRegistro INT NOT NULL,
 FechaRegistro DATETIME NOT NULL,

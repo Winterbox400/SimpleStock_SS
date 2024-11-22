@@ -104,6 +104,12 @@
     <Compile Include="VisualForms\FrmMarcaProductos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="VisualForms\FrmProveedoresProductos.Designer.vb">
+      <DependentUpon>FrmProveedoresProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VisualForms\FrmProveedoresProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="VisualForms\Home.Designer.vb">
       <DependentUpon>Home.vb</DependentUpon>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VisualForms\FrmMarcaProductos.resx">
       <DependentUpon>FrmMarcaProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualForms\FrmProveedoresProductos.resx">
+      <DependentUpon>FrmProveedoresProductos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VisualForms\Home.resx">
       <DependentUpon>Home.vb</DependentUpon>

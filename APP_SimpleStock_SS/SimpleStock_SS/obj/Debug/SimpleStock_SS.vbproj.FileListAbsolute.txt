@@ -11,3 +11,4 @@ C:\winterbox400\ProyectosSerios\RepositorioSimpleStock_SS\APP_SimpleStock_SS\Sim
 C:\winterbox400\ProyectosSerios\RepositorioSimpleStock_SS\APP_SimpleStock_SS\SimpleStock_SS\obj\Debug\SimpleStock_SS.xml
 C:\winterbox400\ProyectosSerios\RepositorioSimpleStock_SS\APP_SimpleStock_SS\SimpleStock_SS\obj\Debug\SimpleStock_SS.pdb
 C:\winterbox400\ProyectosSerios\RepositorioSimpleStock_SS\APP_SimpleStock_SS\SimpleStock_SS\obj\Debug\SimpleStock_SS.FrmMarcaProductos.resources
+C:\winterbox400\ProyectosSerios\RepositorioSimpleStock_SS\APP_SimpleStock_SS\SimpleStock_SS\obj\Debug\SimpleStock_SS.FrmProveedoresProductos.resources
