@@ -28,16 +28,16 @@ Partial Class FrmMarcaProductos
         Me.BtnCambiarMarca = New System.Windows.Forms.Button()
         Me.BtnEliminarMarca = New System.Windows.Forms.Button()
         Me.PnConteinerMarca = New System.Windows.Forms.Panel()
-        Me.PnNombreMarca = New System.Windows.Forms.Panel()
-        Me.TbNombreMarca = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.PnDescripcionMarca = New System.Windows.Forms.Panel()
         Me.TbDescripcionMarca = New System.Windows.Forms.TextBox()
-        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.PnNombreMarca = New System.Windows.Forms.Panel()
+        Me.TbNombreMarca = New System.Windows.Forms.TextBox()
+        Me.DgvVW_Marcas = New System.Windows.Forms.DataGridView()
         Me.PnConteinerMarca.SuspendLayout()
-        Me.PnNombreMarca.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnDescripcionMarca.SuspendLayout()
+        Me.PnNombreMarca.SuspendLayout()
+        CType(Me.DgvVW_Marcas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LbTituloForm
@@ -97,6 +97,38 @@ Partial Class FrmMarcaProductos
         Me.PnConteinerMarca.Size = New System.Drawing.Size(856, 217)
         Me.PnConteinerMarca.TabIndex = 2
         '
+        'BtnGuardar
+        '
+        Me.BtnGuardar.BackgroundImage = CType(resources.GetObject("BtnGuardar.BackgroundImage"), System.Drawing.Image)
+        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnGuardar.FlatAppearance.BorderSize = 0
+        Me.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnGuardar.Location = New System.Drawing.Point(641, 34)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(176, 158)
+        Me.BtnGuardar.TabIndex = 3
+        Me.BtnGuardar.UseVisualStyleBackColor = True
+        '
+        'PnDescripcionMarca
+        '
+        Me.PnDescripcionMarca.BackColor = System.Drawing.Color.White
+        Me.PnDescripcionMarca.Controls.Add(Me.TbDescripcionMarca)
+        Me.PnDescripcionMarca.Location = New System.Drawing.Point(37, 102)
+        Me.PnDescripcionMarca.Name = "PnDescripcionMarca"
+        Me.PnDescripcionMarca.Size = New System.Drawing.Size(563, 97)
+        Me.PnDescripcionMarca.TabIndex = 2
+        '
+        'TbDescripcionMarca
+        '
+        Me.TbDescripcionMarca.BackColor = System.Drawing.Color.White
+        Me.TbDescripcionMarca.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TbDescripcionMarca.Font = New System.Drawing.Font("HP Simplified Hans", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbDescripcionMarca.Location = New System.Drawing.Point(19, 29)
+        Me.TbDescripcionMarca.Name = "TbDescripcionMarca"
+        Me.TbDescripcionMarca.Size = New System.Drawing.Size(529, 33)
+        Me.TbDescripcionMarca.TabIndex = 0
+        '
         'PnNombreMarca
         '
         Me.PnNombreMarca.BackColor = System.Drawing.Color.White
@@ -117,45 +149,19 @@ Partial Class FrmMarcaProductos
         Me.TbNombreMarca.TabIndex = 0
         Me.TbNombreMarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'DataGridView1
+        'DgvVW_Marcas
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(456, 98)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(425, 247)
-        Me.DataGridView1.TabIndex = 3
-        '
-        'PnDescripcionMarca
-        '
-        Me.PnDescripcionMarca.BackColor = System.Drawing.Color.White
-        Me.PnDescripcionMarca.Controls.Add(Me.TbDescripcionMarca)
-        Me.PnDescripcionMarca.Location = New System.Drawing.Point(37, 102)
-        Me.PnDescripcionMarca.Name = "PnDescripcionMarca"
-        Me.PnDescripcionMarca.Size = New System.Drawing.Size(563, 97)
-        Me.PnDescripcionMarca.TabIndex = 2
-        '
-        'TbDescripcionMarca
-        '
-        Me.TbDescripcionMarca.BackColor = System.Drawing.Color.White
-        Me.TbDescripcionMarca.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TbDescripcionMarca.Font = New System.Drawing.Font("HP Simplified Hans", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TbDescripcionMarca.Location = New System.Drawing.Point(19, 29)
-        Me.TbDescripcionMarca.Name = "TbDescripcionMarca"
-        Me.TbDescripcionMarca.Size = New System.Drawing.Size(529, 37)
-        Me.TbDescripcionMarca.TabIndex = 0
-        '
-        'BtnGuardar
-        '
-        Me.BtnGuardar.BackgroundImage = CType(resources.GetObject("BtnGuardar.BackgroundImage"), System.Drawing.Image)
-        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnGuardar.FlatAppearance.BorderSize = 0
-        Me.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnGuardar.Location = New System.Drawing.Point(641, 34)
-        Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(176, 158)
-        Me.BtnGuardar.TabIndex = 3
-        Me.BtnGuardar.UseVisualStyleBackColor = True
+        Me.DgvVW_Marcas.AllowUserToAddRows = False
+        Me.DgvVW_Marcas.AllowUserToResizeRows = False
+        Me.DgvVW_Marcas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvVW_Marcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvVW_Marcas.Location = New System.Drawing.Point(456, 98)
+        Me.DgvVW_Marcas.Name = "DgvVW_Marcas"
+        Me.DgvVW_Marcas.ReadOnly = True
+        Me.DgvVW_Marcas.RowHeadersVisible = False
+        Me.DgvVW_Marcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvVW_Marcas.Size = New System.Drawing.Size(425, 247)
+        Me.DgvVW_Marcas.TabIndex = 3
         '
         'FrmMarcaProductos
         '
@@ -163,7 +169,7 @@ Partial Class FrmMarcaProductos
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(915, 640)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.DgvVW_Marcas)
         Me.Controls.Add(Me.PnConteinerMarca)
         Me.Controls.Add(Me.BtnEliminarMarca)
         Me.Controls.Add(Me.BtnCambiarMarca)
@@ -176,11 +182,11 @@ Partial Class FrmMarcaProductos
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "FrmMarcaProductos"
         Me.PnConteinerMarca.ResumeLayout(False)
-        Me.PnNombreMarca.ResumeLayout(False)
-        Me.PnNombreMarca.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnDescripcionMarca.ResumeLayout(False)
         Me.PnDescripcionMarca.PerformLayout()
+        Me.PnNombreMarca.ResumeLayout(False)
+        Me.PnNombreMarca.PerformLayout()
+        CType(Me.DgvVW_Marcas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -191,7 +197,7 @@ Partial Class FrmMarcaProductos
     Friend WithEvents BtnCambiarMarca As Button
     Friend WithEvents BtnEliminarMarca As Button
     Friend WithEvents PnConteinerMarca As Panel
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DgvVW_Marcas As DataGridView
     Friend WithEvents PnNombreMarca As Panel
     Friend WithEvents TbNombreMarca As TextBox
     Friend WithEvents PnDescripcionMarca As Panel

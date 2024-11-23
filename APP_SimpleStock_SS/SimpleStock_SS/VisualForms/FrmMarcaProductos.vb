@@ -41,6 +41,8 @@ Public Class FrmMarcaProductos
         TbDescripcionMarca.ForeColor = Color.FromArgb(10, 73, 134) ' #0a4986 - Color de letra
         BtnGuardar.FlatAppearance.BorderColor = Color.FromArgb(207, 211, 218) '#cfd3da - Borde del Boton Guardar
         BtnGuardar.FlatAppearance.MouseOverBackColor = Color.FromArgb(207, 215, 218) '#cfd3da - Al pasar el mouse arriba del Boton Guardar
+        DgvVW_Marcas.BackgroundColor = Color.FromArgb(247, 253, 232) ' #f7fde8 - Color de fondo de DataGridView
+        ModObjectForm.PersonalizarDataGridView(DgvVW_Marcas)
 
 
         '/*==================Modificadores de Objetos======================================*/
@@ -51,7 +53,112 @@ Public Class FrmMarcaProductos
         ModObjectForm.CrearPanelEsquinasSemiCirculares(PnNombreMarca, 10)
         ModObjectForm.CrearPanelEsquinasSemiCirculares(PnDescripcionMarca, 20)
 
+        '/*====================Valores Iniciales de los Objetos==============================*/
+        DAOMarcaProductos.LlenarGrid(DgvVW_Marcas)
+    End Sub
+
+    '/*========================================ZONA DE BOTONES======================================*/
+    ' Variables y Objetos Utilies
+    Dim DAOMarcaProductos As New DAOMarcaProductos()
+    Dim OpcionButton As Integer = 0
+    Dim Id As Integer = Nothing
+
+    Private Sub LimpiarValores()
+        OpcionButton = 0
+        TbNombreMarca.Text = ""
+        TbDescripcionMarca.Text = ""
+    End Sub
+
+    'Botton Crear Marca
+    Private Sub BtnCrearNuevaMarca_Click(sender As Object, e As EventArgs) Handles BtnCrearNuevaMarca.Click
+        OpcionButton = 1
+        TbNombreMarca.Text = "Nombre de la Marca"
+        TbDescripcionMarca.Text = "Breve Descripcion de la Marca"
 
     End Sub
+
+    'Botton Cambiar Marca
+    Private Sub BtnCambiarMarca_Click(sender As Object, e As EventArgs) Handles BtnCambiarMarca.Click
+        OpcionButton = 2
+        TbNombreMarca.Text = "Selecciona una Marca en la tabla"
+        TbDescripcionMarca.Text = "Reescribe la informacion"
+    End Sub
+
+    'Botton Eliminar Marca
+    Private Sub BtnEliminarMarca_Click(sender As Object, e As EventArgs) Handles BtnEliminarMarca.Click
+        OpcionButton = 3
+        TbNombreMarca.Text = "Selecciona una Marca en la tabla"
+        TbDescripcionMarca.Text = "Guarda para borrar la informacion"
+    End Sub
+
+    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
+        ' Estado Inicial del Boton
+        If OpcionButton = 0 Then
+            MessageBox.Show("No ha seleccionado una opción valida" & vbCrLf & " Pruebe tocando el boton: Crear, Cambiar o Eliminar")
+        End If
+
+        'Insertar Nueva Marca
+        If OpcionButton = 1 Then
+            Dim RegMarcas As New Marcas()
+
+            'Asignación de valores
+            RegMarcas.Nombre = TbNombreMarca.Text
+            RegMarcas.Descripcion = TbDescripcionMarca.Text
+            RegMarcas.Activo = 1
+            RegMarcas.IdUsuarioRegsitro = 1
+
+            ' llamada al metodo para la inserción
+            DAOMarcaProductos.InsertarMarca(RegMarcas.Nombre, RegMarcas.Descripcion, RegMarcas.Activo, RegMarcas.IdUsuarioRegsitro)
+            MessageBox.Show("Valores guardados correctamente", "Nuevo Marca Agregada", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            ' limpieza de valores
+            LimpiarValores()
+            DAOMarcaProductos.LlenarGrid(DgvVW_Marcas) 'Se vuelva a llenar el DataGriedView
+        End If
+
+        'Actualizar una Marca
+        If OpcionButton = 2 Then
+            Dim RegMarcas As New Marcas()
+
+            'Asignación de valores
+            RegMarcas.IdMarca = Id
+            RegMarcas.Nombre = TbNombreMarca.Text
+            RegMarcas.Descripcion = TbDescripcionMarca.Text
+            RegMarcas.IdUsuarioActualiza = 1
+
+            DAOMarcaProductos.ActualizarMarca(RegMarcas.Nombre, RegMarcas.Descripcion, RegMarcas.IdUsuarioActualiza, RegMarcas.IdMarca)
+            MessageBox.Show("Valores Actualizados correctamente", "Cambiar Marca Existente", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            ' limpieza de valores
+            LimpiarValores()
+            DAOMarcaProductos.LlenarGrid(DgvVW_Marcas) 'Se vuelva a llenar el DataGriedView
+        End If
+
+        If OpcionButton = 3 Then
+            Dim RegMarcas As New Marcas()
+
+            ' Asignación de valores
+            RegMarcas.IdMarca = Id
+            RegMarcas.Activo = 0
+
+            DAOMarcaProductos.EliminarMarca(RegMarcas.Activo, RegMarcas.IdMarca)
+            MessageBox.Show("Valore Eliminado correctamente", "Elimnar Marca Existente", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            ' limpieza de valores
+            LimpiarValores()
+            DAOMarcaProductos.LlenarGrid(DgvVW_Marcas) 'Se vuelva a llenar el DataGriedView
+        End If
+    End Sub
+
+    Private Sub DgvVW_Marcas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvVW_Marcas.CellClick
+        'Solo manda valores a los TextBox si se toca el boton Cambiar
+        If OpcionButton = 2 Or OpcionButton = 3 Then
+            TbNombreMarca.Text = DgvVW_Marcas.SelectedCells(1).Value
+            TbDescripcionMarca.Text = DgvVW_Marcas.SelectedCells(2).Value
+            Id = DgvVW_Marcas.SelectedCells(0).Value
+        End If
+
+    End Sub
+
 
 End Class

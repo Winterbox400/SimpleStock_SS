@@ -21,7 +21,6 @@ Public Class DBConnection
     End Sub
 
 
-
     ' Método para abrir la conexión
     Public Function OpenConnection() As Boolean
         Try
@@ -44,38 +43,122 @@ Public Class DBConnection
         End If
     End Sub
 
-    ' Método para ejecutar consultas de tipo SELECT
-    Public Function ExecuteQuery(query As String) As DataTable
-        Dim dataTable As New DataTable()
-        Try
-            If OpenConnection() Then
-                Using command As New SqlCommand(query, connection)
-                    Using adapter As New SqlDataAdapter(command)
-                        adapter.Fill(dataTable)
-                    End Using
-                End Using
-                CloseConnection()
-            End If
-        Catch ex As Exception
-            MessageBox.Show("Error al ejecutar consulta: " & ex.Message)
-        End Try
-        Return dataTable
-    End Function
 
-    ' Método para ejecutar consultas de tipo INSERT, UPDATE, DELETE
-    Public Function ExecuteNonQuery(query As String) As Integer
-        Dim rowsAffected As Integer = 0
+    ' Propiedad pública para acceder a la conexión
+    Public ReadOnly Property Conexion As SqlConnection
+        Get
+            Return connection
+        End Get
+    End Property
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ' Método para insertar clientes en la base de datos
+    Public Sub InsertarProductos(nombre As String, categoria As String, proveedor As String)
         Try
-            If OpenConnection() Then
-                Using command As New SqlCommand(query, connection)
-                    rowsAffected = command.ExecuteNonQuery()
-                End Using
-                CloseConnection()
-            End If
-        Catch ex As Exception
-            MessageBox.Show("Error al ejecutar comando: " & ex.Message)
+            ' Abrimos la conexión
+            OpenConnection()
+
+            ' Definimos la consulta TSQL con parámetros
+            Dim query As String = "SET NOCOUNT ON; INSERT INTO Productos (Nombre, Categoria, Proveedor) VALUES (@Nombre, @Categoria, @Proveedor)"
+
+            ' Creamos el comando con la consulta y la conexión
+            Using command As New SqlCommand(query, connection)
+                ' Agregamos los parámetros
+                command.Parameters.AddWithValue("@Nombre", nombre)
+                command.Parameters.AddWithValue("@Categoria", categoria)
+                command.Parameters.AddWithValue("@Proveedor", proveedor)
+
+                ' Ejecutamos la consulta
+                command.ExecuteNonQuery()
+            End Using
+        Catch ex As SqlException
+            ' Mostramos el error en un cuadro de diálogo
+            MessageBox.Show("Error al insertar cliente: " & ex.Message)
+        Finally
+            ' Cerramos la conexión
+            CloseConnection()
         End Try
-        Return rowsAffected
-    End Function
+    End Sub
+
+
+    'Encapsulación de codigo para ver su funcionamiento
+    'Metodo para Agregar valores a un ComboBox
+    Public Sub PruebaComboBox(Marcas As ComboBox)
+        Try
+            'Abrimos la conexión
+            OpenConnection()
+
+            'Definimos la Consulta TSQL
+            Dim query As String = "SELECT * FROM Marcas"
+
+            ' Creamos el comando con la consulta y la conexión
+            Using command As New SqlDataAdapter(query, connection)
+
+                ' Creamos un DataSet como Contenedor de valores
+                Dim data As New DataSet
+
+                ' Rellenamos el DataSet con la consulta
+                command.Fill(data)
+
+                ' Mandamos a agregar los datos al ComboBox asignado
+                Marcas.DataSource = data.Tables(0) 'Asigna de donde va a venir la información
+                Marcas.DisplayMember = "Nombre" 'Asigna el valor que se mostrará en el ComboBox
+                Marcas.ValueMember = "IdMarca" 'Guarda el Id del Valor seleccionado en el ComboBox
+            End Using
+
+        Catch ex As SqlException
+            ' Mostramos el error en un cuadro de diálogo
+            MessageBox.Show("Error al Cargar ComboBox: " & ex.Message)
+        Finally
+            ' Cerramos la conexión
+            CloseConnection()
+        End Try
+
+    End Sub
+
+    'Prueba para insertar valores con una tabla de datos Foranos con ComboBox
+    Public Sub InsertarArticulos(nombre As String, IdMarca As Integer)
+        Try
+            ' Abrimos la conexión
+            OpenConnection()
+
+            ' Definimos la consulta TSQL con parámetros
+            Dim query As String = "SET NOCOUNT ON; INSERT INTO Articulos (Nombre, IdMarca) VALUES (@Nombre, @IdMarca)"
+
+            ' Creamos el comando con la consulta y la conexión
+            Using command As New SqlCommand(query, connection)
+                ' Agregamos los parámetros
+                command.Parameters.AddWithValue("@Nombre", nombre)
+                command.Parameters.AddWithValue("@IdMarca", IdMarca)
+
+                ' Ejecutamos la consulta
+                command.ExecuteNonQuery()
+                CloseConnection()
+            End Using
+        Catch ex As SqlException
+            ' Mostramos el error en un cuadro de diálogo
+            MessageBox.Show("Error al Insertar un Articulo: " & ex.Message)
+
+        Finally
+            ' Cerramos la conexión
+            CloseConnection()
+        End Try
+
+    End Sub
 
 End Class
