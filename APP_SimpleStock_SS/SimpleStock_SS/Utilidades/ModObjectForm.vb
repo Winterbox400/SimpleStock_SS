@@ -90,7 +90,39 @@ Public Class ModObjectForm
     End Sub
 
     ' Cambiar colores de fondo de las celdas de los DataGriedView
+    'Public Shared Sub PersonalizarDataGridView(dataGridView As DataGridView)
+    '    ' Personalizar los encabezados de las columnas
+    '    With dataGridView.ColumnHeadersDefaultCellStyle
+    '        .BackColor = Color.FromArgb(12, 92, 168) '#0c5ca8 Color de fondo de los encabezados
+    '        .ForeColor = Color.FromArgb(253, 249, 180) '#fdf9b4 Color del texto de los encabezados
+    '        .Font = New Font(dataGridView.Font, FontStyle.Bold) ' Fuente de los encabezados
+    '    End With
+
+    '    ' Personalizar las celdas de los datos
+    '    With dataGridView.DefaultCellStyle
+    '        .BackColor = Color.FromArgb(247, 253, 232) ' Color de fondo de las celdas de datos
+    '        .ForeColor = Color.Black ' Color del texto de las celdas de datos
+    '        .SelectionBackColor = Color.FromArgb(255, 105, 135) ' Color de fondo de las celdas seleccionadas
+    '        .SelectionForeColor = Color.White ' Color del texto de las celdas seleccionadas
+    '    End With
+
+    '    ' Aplicar bordes o cualquier otro estilo general
+    '    dataGridView.GridColor = Color.Black ' Color de los bordes de la cuadrícula
+    '    dataGridView.EnableHeadersVisualStyles = False ' Para que los estilos personalizados funcionen
+    'End Sub
+
     Public Shared Sub PersonalizarDataGridView(dataGridView As DataGridView)
+        'Evita que los usuarios puedan editar datos directamente
+        dataGridView.ReadOnly = True
+        'Hace que las columnas se ajusten automaticamente
+        dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        'Oculta la columna vacia que aparece a la izquierda
+        dataGridView.RowHeadersVisible = False
+        'Elimina la Fila vacia que aparece abajo
+        dataGridView.AllowUserToAddRows = False
+        'Bloque poder agrandar las celdas verticalmente
+        dataGridView.AllowUserToResizeRows = False
+
         ' Personalizar los encabezados de las columnas
         With dataGridView.ColumnHeadersDefaultCellStyle
             .BackColor = Color.FromArgb(12, 92, 168) '#0c5ca8 Color de fondo de los encabezados

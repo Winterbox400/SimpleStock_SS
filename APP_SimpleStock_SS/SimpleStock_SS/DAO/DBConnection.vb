@@ -67,34 +67,6 @@ Public Class DBConnection
 
 
 
-    ' Método para insertar clientes en la base de datos
-    Public Sub InsertarProductos(nombre As String, categoria As String, proveedor As String)
-        Try
-            ' Abrimos la conexión
-            OpenConnection()
-
-            ' Definimos la consulta TSQL con parámetros
-            Dim query As String = "SET NOCOUNT ON; INSERT INTO Productos (Nombre, Categoria, Proveedor) VALUES (@Nombre, @Categoria, @Proveedor)"
-
-            ' Creamos el comando con la consulta y la conexión
-            Using command As New SqlCommand(query, connection)
-                ' Agregamos los parámetros
-                command.Parameters.AddWithValue("@Nombre", nombre)
-                command.Parameters.AddWithValue("@Categoria", categoria)
-                command.Parameters.AddWithValue("@Proveedor", proveedor)
-
-                ' Ejecutamos la consulta
-                command.ExecuteNonQuery()
-            End Using
-        Catch ex As SqlException
-            ' Mostramos el error en un cuadro de diálogo
-            MessageBox.Show("Error al insertar cliente: " & ex.Message)
-        Finally
-            ' Cerramos la conexión
-            CloseConnection()
-        End Try
-    End Sub
-
 
     'Encapsulación de codigo para ver su funcionamiento
     'Metodo para Agregar valores a un ComboBox

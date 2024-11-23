@@ -27,8 +27,25 @@ GO
 --GO
 --SELECT * FROM Usuarios
 --GO
---SELECT * FROM Marcas
+--SELECT * FROM Proveedores
 --GO
+
+--INSERT INTO Proveedores(Nombre, Telefono, Correo, Activo, IdUsuarioRegistro, FechaRegistro)
+--	VALUES	(@nombre, @telefono, @correo, @activo, @idUsuarioRegsitro, GETDATE())
+--GO
+
+--UPDATE Proveedores SET Nombre = @nombre, Telefono = @telefono, Correo = @correo,
+--		IdUsuarioActualiza = @idUsuarioActualiza, FechaActualizacion = GETDATE()
+--		WHERE IdProveedor = @idProveedor
+
+--UPDATE Proveedores SET Activo = @activo WHERE IdProveedor = @idProveedor
+--GO
+
+--SELECT * FROM vw_Proveedores
+--GO
+--SELECT * FROM Proveedores
+--GO
+
 
 --INSERT INTO Marcas(Nombre, Descripcion, Activo, IdUsuarioRegistro, FechaRegistro)
 --	VALUES ()

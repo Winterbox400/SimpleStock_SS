@@ -40,8 +40,8 @@ CREATE VIEW vw_Proveedores AS
 SELECT
 PE.IdProveedor AS Codigo,
 PE.Nombre AS Proveedores,
-PE.Telefono,
-PE.Correo
+PE.Correo,
+PE.Telefono
 FROM Proveedores PE
 WHERE Pe.Activo = 1
 GO

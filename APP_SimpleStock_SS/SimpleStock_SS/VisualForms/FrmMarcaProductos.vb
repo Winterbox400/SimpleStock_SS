@@ -91,6 +91,7 @@ Public Class FrmMarcaProductos
         TbDescripcionMarca.Text = "Guarda para borrar la informacion"
     End Sub
 
+    'Botton guardar acción
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         ' Estado Inicial del Boton
         If OpcionButton = 0 Then
@@ -105,10 +106,10 @@ Public Class FrmMarcaProductos
             RegMarcas.Nombre = TbNombreMarca.Text
             RegMarcas.Descripcion = TbDescripcionMarca.Text
             RegMarcas.Activo = 1
-            RegMarcas.IdUsuarioRegsitro = 1
+            RegMarcas.IdUsuarioRegistro = 1
 
             ' llamada al metodo para la inserción
-            DAOMarcaProductos.InsertarMarca(RegMarcas.Nombre, RegMarcas.Descripcion, RegMarcas.Activo, RegMarcas.IdUsuarioRegsitro)
+            DAOMarcaProductos.InsertarMarca(RegMarcas.Nombre, RegMarcas.Descripcion, RegMarcas.Activo, RegMarcas.IdUsuarioRegistro)
             MessageBox.Show("Valores guardados correctamente", "Nuevo Marca Agregada", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             ' limpieza de valores

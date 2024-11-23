@@ -29,18 +29,18 @@ Partial Class FrmProveedoresProductos
         Me.BtnEliminarProveedor = New System.Windows.Forms.Button()
         Me.PnConteinerProveedor = New System.Windows.Forms.Panel()
         Me.BtnGuardar = New System.Windows.Forms.Button()
-        Me.PnNombreProveedor = New System.Windows.Forms.Panel()
-        Me.TbNombreProveedor = New System.Windows.Forms.TextBox()
-        Me.PnCorreoProveedor = New System.Windows.Forms.Panel()
-        Me.TbCorreoProveedor = New System.Windows.Forms.TextBox()
         Me.PnCelularProveedor = New System.Windows.Forms.Panel()
         Me.TbCelularProveedor = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.PnCorreoProveedor = New System.Windows.Forms.Panel()
+        Me.TbCorreoProveedor = New System.Windows.Forms.TextBox()
+        Me.PnNombreProveedor = New System.Windows.Forms.Panel()
+        Me.TbNombreProveedor = New System.Windows.Forms.TextBox()
+        Me.DgvVW_Proveedor = New System.Windows.Forms.DataGridView()
         Me.PnConteinerProveedor.SuspendLayout()
-        Me.PnNombreProveedor.SuspendLayout()
-        Me.PnCorreoProveedor.SuspendLayout()
         Me.PnCelularProveedor.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnCorreoProveedor.SuspendLayout()
+        Me.PnNombreProveedor.SuspendLayout()
+        CType(Me.DgvVW_Proveedor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnCrearNuevoProveedor
@@ -114,25 +114,25 @@ Partial Class FrmProveedoresProductos
         Me.BtnGuardar.TabIndex = 3
         Me.BtnGuardar.UseVisualStyleBackColor = True
         '
-        'PnNombreProveedor
+        'PnCelularProveedor
         '
-        Me.PnNombreProveedor.BackColor = System.Drawing.Color.White
-        Me.PnNombreProveedor.Controls.Add(Me.TbNombreProveedor)
-        Me.PnNombreProveedor.Location = New System.Drawing.Point(13, 34)
-        Me.PnNombreProveedor.Name = "PnNombreProveedor"
-        Me.PnNombreProveedor.Size = New System.Drawing.Size(492, 50)
-        Me.PnNombreProveedor.TabIndex = 2
+        Me.PnCelularProveedor.BackColor = System.Drawing.Color.White
+        Me.PnCelularProveedor.Controls.Add(Me.TbCelularProveedor)
+        Me.PnCelularProveedor.Location = New System.Drawing.Point(13, 167)
+        Me.PnCelularProveedor.Name = "PnCelularProveedor"
+        Me.PnCelularProveedor.Size = New System.Drawing.Size(347, 50)
+        Me.PnCelularProveedor.TabIndex = 2
         '
-        'TbNombreProveedor
+        'TbCelularProveedor
         '
-        Me.TbNombreProveedor.BackColor = System.Drawing.Color.White
-        Me.TbNombreProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TbNombreProveedor.Font = New System.Drawing.Font("HP Simplified Hans", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TbNombreProveedor.Location = New System.Drawing.Point(19, 11)
-        Me.TbNombreProveedor.Name = "TbNombreProveedor"
-        Me.TbNombreProveedor.Size = New System.Drawing.Size(458, 31)
-        Me.TbNombreProveedor.TabIndex = 0
-        Me.TbNombreProveedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TbCelularProveedor.BackColor = System.Drawing.Color.White
+        Me.TbCelularProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TbCelularProveedor.Font = New System.Drawing.Font("HP Simplified Hans", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbCelularProveedor.Location = New System.Drawing.Point(19, 11)
+        Me.TbCelularProveedor.Name = "TbCelularProveedor"
+        Me.TbCelularProveedor.Size = New System.Drawing.Size(313, 31)
+        Me.TbCelularProveedor.TabIndex = 0
+        Me.TbCelularProveedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'PnCorreoProveedor
         '
@@ -154,40 +154,41 @@ Partial Class FrmProveedoresProductos
         Me.TbCorreoProveedor.TabIndex = 0
         Me.TbCorreoProveedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'PnCelularProveedor
+        'PnNombreProveedor
         '
-        Me.PnCelularProveedor.BackColor = System.Drawing.Color.White
-        Me.PnCelularProveedor.Controls.Add(Me.TbCelularProveedor)
-        Me.PnCelularProveedor.Location = New System.Drawing.Point(13, 167)
-        Me.PnCelularProveedor.Name = "PnCelularProveedor"
-        Me.PnCelularProveedor.Size = New System.Drawing.Size(347, 50)
-        Me.PnCelularProveedor.TabIndex = 2
+        Me.PnNombreProveedor.BackColor = System.Drawing.Color.White
+        Me.PnNombreProveedor.Controls.Add(Me.TbNombreProveedor)
+        Me.PnNombreProveedor.Location = New System.Drawing.Point(13, 34)
+        Me.PnNombreProveedor.Name = "PnNombreProveedor"
+        Me.PnNombreProveedor.Size = New System.Drawing.Size(492, 50)
+        Me.PnNombreProveedor.TabIndex = 2
         '
-        'TbCelularProveedor
+        'TbNombreProveedor
         '
-        Me.TbCelularProveedor.BackColor = System.Drawing.Color.White
-        Me.TbCelularProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TbCelularProveedor.Font = New System.Drawing.Font("HP Simplified Hans", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TbCelularProveedor.Location = New System.Drawing.Point(19, 11)
-        Me.TbCelularProveedor.Name = "TbCelularProveedor"
-        Me.TbCelularProveedor.Size = New System.Drawing.Size(313, 31)
-        Me.TbCelularProveedor.TabIndex = 0
-        Me.TbCelularProveedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TbNombreProveedor.BackColor = System.Drawing.Color.White
+        Me.TbNombreProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TbNombreProveedor.Font = New System.Drawing.Font("HP Simplified Hans", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbNombreProveedor.Location = New System.Drawing.Point(19, 11)
+        Me.TbNombreProveedor.Name = "TbNombreProveedor"
+        Me.TbNombreProveedor.Size = New System.Drawing.Size(458, 31)
+        Me.TbNombreProveedor.TabIndex = 0
+        Me.TbNombreProveedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'DataGridView1
+        'DgvVW_Proveedor
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(79, 397)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(757, 206)
-        Me.DataGridView1.TabIndex = 5
+        Me.DgvVW_Proveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvVW_Proveedor.Location = New System.Drawing.Point(79, 397)
+        Me.DgvVW_Proveedor.Name = "DgvVW_Proveedor"
+        Me.DgvVW_Proveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvVW_Proveedor.Size = New System.Drawing.Size(757, 206)
+        Me.DgvVW_Proveedor.TabIndex = 5
         '
         'FrmProveedoresProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(915, 640)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.DgvVW_Proveedor)
         Me.Controls.Add(Me.PnConteinerProveedor)
         Me.Controls.Add(Me.LbTituloForm)
         Me.Controls.Add(Me.BtnEliminarProveedor)
@@ -199,13 +200,13 @@ Partial Class FrmProveedoresProductos
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "FrmProveedoresProductos"
         Me.PnConteinerProveedor.ResumeLayout(False)
-        Me.PnNombreProveedor.ResumeLayout(False)
-        Me.PnNombreProveedor.PerformLayout()
-        Me.PnCorreoProveedor.ResumeLayout(False)
-        Me.PnCorreoProveedor.PerformLayout()
         Me.PnCelularProveedor.ResumeLayout(False)
         Me.PnCelularProveedor.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PnCorreoProveedor.ResumeLayout(False)
+        Me.PnCorreoProveedor.PerformLayout()
+        Me.PnNombreProveedor.ResumeLayout(False)
+        Me.PnNombreProveedor.PerformLayout()
+        CType(Me.DgvVW_Proveedor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -223,5 +224,5 @@ Partial Class FrmProveedoresProductos
     Friend WithEvents TbCorreoProveedor As TextBox
     Friend WithEvents PnCelularProveedor As Panel
     Friend WithEvents TbCelularProveedor As TextBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DgvVW_Proveedor As DataGridView
 End Class

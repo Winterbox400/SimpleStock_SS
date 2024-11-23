@@ -74,8 +74,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DAOMarcaProductos.vb" />
+    <Compile Include="DAO\DAOProveedorProducto.vb" />
     <Compile Include="DAO\DBConnection.vb" />
     <Compile Include="Modelos\Marcas.vb" />
+    <Compile Include="Modelos\Proveedor.vb" />
     <Compile Include="Utilidades\ModObjectForm.vb" />
     <Compile Include="VisualForms\Form1.vb">
       <SubType>Form</SubType>
