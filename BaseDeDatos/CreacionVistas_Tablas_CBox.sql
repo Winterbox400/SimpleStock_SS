@@ -92,7 +92,7 @@ SELECT
 C.IdCategoria AS Id,
 C.Nombre AS Categoria
 FROM Categorias C
-WHERE C.IdCategoria = 1
+WHERE C.Activo = 1
 GO
 
 /*Mostrar valores en ComboBox de Marcas
@@ -105,7 +105,7 @@ SELECT
 M.IdMarca AS Id,
 M.Nombre AS Marca
 FROM Marcas M
-WHERE M.IdMarca = 1
+WHERE M.Activo = 1
 GO
 
 /*Mostrar valores en ComboBox de Proveedores
@@ -118,5 +118,5 @@ SELECT
 PE.IdProveedor AS Id,
 PE.Nombre AS Proveedor
 FROM Proveedores PE
-WHERE PE.IdProveedor = 1
+WHERE PE.Activo = 1
 GO

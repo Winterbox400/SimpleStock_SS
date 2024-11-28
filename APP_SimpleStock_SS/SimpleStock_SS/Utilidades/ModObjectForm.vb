@@ -89,28 +89,6 @@ Public Class ModObjectForm
         panel.Region = New Region(path)
     End Sub
 
-    ' Cambiar colores de fondo de las celdas de los DataGriedView
-    'Public Shared Sub PersonalizarDataGridView(dataGridView As DataGridView)
-    '    ' Personalizar los encabezados de las columnas
-    '    With dataGridView.ColumnHeadersDefaultCellStyle
-    '        .BackColor = Color.FromArgb(12, 92, 168) '#0c5ca8 Color de fondo de los encabezados
-    '        .ForeColor = Color.FromArgb(253, 249, 180) '#fdf9b4 Color del texto de los encabezados
-    '        .Font = New Font(dataGridView.Font, FontStyle.Bold) ' Fuente de los encabezados
-    '    End With
-
-    '    ' Personalizar las celdas de los datos
-    '    With dataGridView.DefaultCellStyle
-    '        .BackColor = Color.FromArgb(247, 253, 232) ' Color de fondo de las celdas de datos
-    '        .ForeColor = Color.Black ' Color del texto de las celdas de datos
-    '        .SelectionBackColor = Color.FromArgb(255, 105, 135) ' Color de fondo de las celdas seleccionadas
-    '        .SelectionForeColor = Color.White ' Color del texto de las celdas seleccionadas
-    '    End With
-
-    '    ' Aplicar bordes o cualquier otro estilo general
-    '    dataGridView.GridColor = Color.Black ' Color de los bordes de la cuadrícula
-    '    dataGridView.EnableHeadersVisualStyles = False ' Para que los estilos personalizados funcionen
-    'End Sub
-
     Public Shared Sub PersonalizarDataGridView(dataGridView As DataGridView)
         'Evita que los usuarios puedan editar datos directamente
         dataGridView.ReadOnly = True
@@ -142,4 +120,31 @@ Public Class ModObjectForm
         dataGridView.GridColor = Color.Black ' Color de los bordes de la cuadrícula
         dataGridView.EnableHeadersVisualStyles = False ' Para que los estilos personalizados funcionen
     End Sub
+
+
+    ' Modificar ComboBox
+    ' Método para personalizar el diseño del ComboBox
+    Public Shared Sub ConfigurarComboBox(comboBox As ComboBox)
+        comboBox.DrawMode = DrawMode.OwnerDrawFixed ' Configurar el modo de dibujo personalizado
+        AddHandler comboBox.DrawItem, AddressOf ComboBox_DrawItem
+    End Sub
+
+    ' Evento para dibujar los elementos personalizados del ComboBox
+    Private Shared Sub ComboBox_DrawItem(sender As Object, e As DrawItemEventArgs)
+        Dim combo As ComboBox = CType(sender, ComboBox)
+
+        ' Verificar si hay elementos para dibujar
+        If e.Index < 0 Then Return
+
+        ' Dibujar el fondo personalizado
+        e.Graphics.FillRectangle(New SolidBrush(Color.LightBlue), e.Bounds)
+
+        ' Dibujar el texto del elemento
+        Dim textColor As Color = If((e.State And DrawItemState.Selected) = DrawItemState.Selected, Color.White, Color.Black)
+        TextRenderer.DrawText(e.Graphics, combo.Items(e.Index).ToString(), combo.Font, e.Bounds, textColor, TextFormatFlags.Left)
+
+        ' Dibujar el rectángulo de enfoque
+        e.DrawFocusRectangle()
+    End Sub
+
 End Class

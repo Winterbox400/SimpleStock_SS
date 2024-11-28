@@ -122,4 +122,39 @@ Public Class DAOCategoriaProducto
 
     End Sub
 
+    'Metodo para Agregar valores a un ComboBox
+    Public Sub PruebaComboBox(Marcas As ComboBox)
+        Try
+            'Abrimos la conexión
+            Conn.OpenConnection()
+
+            'Definimos la Consulta TSQL
+            Dim query As String = "SELECT * FROM vCBoxCategorias"
+
+            ' Creamos el comando con la consulta y la conexión
+            Using command As New SqlDataAdapter(query, Conn.Conexion)
+
+                ' Creamos un DataSet como Contenedor de valores
+                Dim data As New DataSet
+
+                ' Rellenamos el DataSet con la consulta
+                command.Fill(data)
+
+                ' Mandamos a agregar los datos al ComboBox asignado
+                Marcas.DataSource = data.Tables(0) 'Asigna de donde va a venir la información
+                Marcas.DisplayMember = "Categoria" 'Asigna el valor que se mostrará en el ComboBox
+                Marcas.ValueMember = "Id" 'Guarda el Id del Valor seleccionado en el ComboBox
+            End Using
+
+        Catch ex As SqlException
+            ' Mostramos el error en un cuadro de diálogo
+            MessageBox.Show("Error al Cargar ComboBox: " & ex.Message)
+        Finally
+            ' Cerramos la conexión
+            Conn.CloseConnection()
+        End Try
+
+    End Sub
+
+
 End Class
