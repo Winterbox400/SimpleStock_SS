@@ -55,6 +55,7 @@
 
         '/*====================Valores Iniciales de los Objetos==============================*/
         DAOProveedorProducto.LlenarGrid(DgvVW_Proveedor)
+        LbSubTituloPanel.Text = ""
     End Sub
 
     '/*========================================ZONA DE BOTONES======================================*/
@@ -68,6 +69,7 @@
         TbNombreProveedor.Text = ""
         TbCorreoProveedor.Text = ""
         TbCelularProveedor.Text = ""
+        LbSubTituloPanel.Text = ""
     End Sub
 
     'Botton Crear Proveedor
@@ -76,6 +78,7 @@
         TbNombreProveedor.Text = "Nombre del Proveedor"
         TbCorreoProveedor.Text = "Correo del Proveedor"
         TbCelularProveedor.Text = "Numero telefonico por favor!"
+        LbSubTituloPanel.Text = "Ingrese los datos del Proveedor"
     End Sub
     'Botton Actualizar Proveedor
     Private Sub BtnCambiarProveedor_Click(sender As Object, e As EventArgs) Handles BtnCambiarProveedor.Click
@@ -83,6 +86,7 @@
         TbNombreProveedor.Text = "Selecciona un Proveedor en la tabla"
         TbCorreoProveedor.Text = "Reescribe su informacion"
         TbCelularProveedor.Text = "Ten cuidado cuando actualices!"
+        LbSubTituloPanel.Text = "Modifique un Proveedor existente de la tabla"
     End Sub
     'Botton Eliminar Proveedor
     Private Sub BtnEliminarProveedor_Click(sender As Object, e As EventArgs) Handles BtnEliminarProveedor.Click
@@ -90,6 +94,7 @@
         TbNombreProveedor.Text = "Selecciona un Proveedor en la tabla"
         TbCorreoProveedor.Text = "Elimina su informacion"
         TbCelularProveedor.Text = "Bye bye proveedor!"
+        LbSubTituloPanel.Text = "Elimine un Proveedor existente de la tabla"
     End Sub
 
     'Botton confirmar acción
@@ -99,7 +104,7 @@
             MessageBox.Show("No ha seleccionado una opción valida" & vbCrLf & " Pruebe tocando el boton: Crear, Cambiar o Eliminar", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
 
-        'Insertar Nueva Marca
+        'Insertar Nueva Cliente
         If OpcionButton = 1 Then
             Dim RegProveedor As New Proveedor()
 
@@ -119,7 +124,7 @@
             DAOProveedorProducto.LlenarGrid(DgvVW_Proveedor) 'Se vuelva a llenar el DataGriedView
         End If
 
-        'Actualizar un Proveedor
+        'Actualizar un Cliente
         If OpcionButton = 2 Then
             Dim RegProveedor As New Proveedor()
 
@@ -138,7 +143,7 @@
             DAOProveedorProducto.LlenarGrid(DgvVW_Proveedor) 'Se vuelva a llenar el DataGriedView
         End If
 
-        'Eliminar un Proveedor
+        'Eliminar un Cliente
         If OpcionButton = 3 Then
             Dim RegProveedor As New Proveedor()
 
@@ -158,8 +163,8 @@
     Private Sub DgvVW_Proveedor_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvVW_Proveedor.CellClick
         If OpcionButton = 2 Or OpcionButton = 3 Then
             TbNombreProveedor.Text = DgvVW_Proveedor.SelectedCells(1).Value
-            TbCelularProveedor.Text = DgvVW_Proveedor.SelectedCells(2).Value
-            TbCorreoProveedor.Text = DgvVW_Proveedor.SelectedCells(3).Value
+            TbCorreoProveedor.Text = DgvVW_Proveedor.SelectedCells(2).Value
+            TbCelularProveedor.Text = DgvVW_Proveedor.SelectedCells(3).Value
 
             Id = DgvVW_Proveedor.SelectedCells(0).Value
         End If

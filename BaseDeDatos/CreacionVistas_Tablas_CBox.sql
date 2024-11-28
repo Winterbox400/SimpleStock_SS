@@ -46,6 +46,20 @@ FROM Proveedores PE
 WHERE Pe.Activo = 1
 GO
 
+/*Mostrar datos en la tabla de "Clientes"
+Al ser datos que el usuario administrador puede crear, modificar u eliminar dentro de la aplicación
+Se condiciono de que solo se puedan mostrar los datos "Activos" dentro de la tabla
+*/
+CREATE VIEW vw_Clientes AS
+SELECT
+CL.IdCliente AS Codigo,
+CL.Nombre AS Clientes,
+CL.Correo,
+CL.Telefono
+FROM Clientes CL
+WHERE CL.Activo = 1
+GO
+
 /*Mostrar datos de la tabla "Catalogo de Productos"
 Al ser datos que el usuario administrador puede crear, modificar u eliminar dentro de la aplicación
 Se condiciono de que solo se puedan mostrar los datos "Activos" dentro de la tabla, Además 

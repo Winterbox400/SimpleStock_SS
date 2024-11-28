@@ -55,6 +55,7 @@ Public Class FrmMarcaProductos
 
         '/*====================Valores Iniciales de los Objetos==============================*/
         DAOMarcaProductos.LlenarGrid(DgvVW_Marcas)
+        LbSubTituloPanel.Text = ""
     End Sub
 
     '/*========================================ZONA DE BOTONES======================================*/
@@ -67,6 +68,7 @@ Public Class FrmMarcaProductos
         OpcionButton = 0
         TbNombreMarca.Text = ""
         TbDescripcionMarca.Text = ""
+        LbSubTituloPanel.Text = ""
     End Sub
 
     'Botton Crear Marca
@@ -74,7 +76,7 @@ Public Class FrmMarcaProductos
         OpcionButton = 1
         TbNombreMarca.Text = "Nombre de la Marca"
         TbDescripcionMarca.Text = "Breve Descripcion de la Marca"
-
+        LbSubTituloPanel.Text = "Ingrese la nueva Marca y su Descripcion"
     End Sub
 
     'Botton Cambiar Marca
@@ -82,6 +84,7 @@ Public Class FrmMarcaProductos
         OpcionButton = 2
         TbNombreMarca.Text = "Selecciona una Marca en la tabla"
         TbDescripcionMarca.Text = "Reescribe la informacion"
+        LbSubTituloPanel.Text = "Modifique una Marca existente de la tabla"
     End Sub
 
     'Botton Eliminar Marca
@@ -89,6 +92,7 @@ Public Class FrmMarcaProductos
         OpcionButton = 3
         TbNombreMarca.Text = "Selecciona una Marca en la tabla"
         TbDescripcionMarca.Text = "Guarda para borrar la informacion"
+        LbSubTituloPanel.Text = "Elimine una Marca Existente de la tabla"
     End Sub
 
     'Botton guardar acción

@@ -27,7 +27,7 @@ Public Class DAOProveedorProducto
             End Using
         Catch ex As SqlException
             ' Mostramos el error en un cuadro de diálogo
-            MessageBox.Show("Error al insertar cliente: " & ex.Message)
+            MessageBox.Show("Error al insertar Proveedor: " & ex.Message)
         Finally
             ' Cerramos la conexión
             Conn.CloseConnection()
@@ -57,7 +57,7 @@ Public Class DAOProveedorProducto
             End Using
         Catch ex As SqlException
             ' Mostramos el error en un cuadro de diálogo
-            MessageBox.Show("Error al insertar cliente: " & ex.Message)
+            MessageBox.Show("Error al insertar Proveedor: " & ex.Message)
         Finally
             ' Cerramos la conexión
             Conn.CloseConnection()

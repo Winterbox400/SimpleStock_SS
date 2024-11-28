@@ -28,6 +28,7 @@ Partial Class FrmProveedoresProductos
         Me.BtnCambiarProveedor = New System.Windows.Forms.Button()
         Me.BtnEliminarProveedor = New System.Windows.Forms.Button()
         Me.PnConteinerProveedor = New System.Windows.Forms.Panel()
+        Me.LbSubTituloPanel = New System.Windows.Forms.Label()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.PnCelularProveedor = New System.Windows.Forms.Panel()
         Me.TbCelularProveedor = New System.Windows.Forms.TextBox()
@@ -92,6 +93,7 @@ Partial Class FrmProveedoresProductos
         'PnConteinerProveedor
         '
         Me.PnConteinerProveedor.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.PnConteinerProveedor.Controls.Add(Me.LbSubTituloPanel)
         Me.PnConteinerProveedor.Controls.Add(Me.BtnGuardar)
         Me.PnConteinerProveedor.Controls.Add(Me.PnCelularProveedor)
         Me.PnConteinerProveedor.Controls.Add(Me.PnCorreoProveedor)
@@ -100,6 +102,16 @@ Partial Class FrmProveedoresProductos
         Me.PnConteinerProveedor.Name = "PnConteinerProveedor"
         Me.PnConteinerProveedor.Size = New System.Drawing.Size(526, 271)
         Me.PnConteinerProveedor.TabIndex = 4
+        '
+        'LbSubTituloPanel
+        '
+        Me.LbSubTituloPanel.AutoSize = True
+        Me.LbSubTituloPanel.Font = New System.Drawing.Font("HP Simplified Hans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbSubTituloPanel.Location = New System.Drawing.Point(16, 7)
+        Me.LbSubTituloPanel.Name = "LbSubTituloPanel"
+        Me.LbSubTituloPanel.Size = New System.Drawing.Size(71, 22)
+        Me.LbSubTituloPanel.TabIndex = 6
+        Me.LbSubTituloPanel.Text = "Label1"
         '
         'BtnGuardar
         '
@@ -200,6 +212,7 @@ Partial Class FrmProveedoresProductos
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "FrmProveedoresProductos"
         Me.PnConteinerProveedor.ResumeLayout(False)
+        Me.PnConteinerProveedor.PerformLayout()
         Me.PnCelularProveedor.ResumeLayout(False)
         Me.PnCelularProveedor.PerformLayout()
         Me.PnCorreoProveedor.ResumeLayout(False)
@@ -225,4 +238,5 @@ Partial Class FrmProveedoresProductos
     Friend WithEvents PnCelularProveedor As Panel
     Friend WithEvents TbCelularProveedor As TextBox
     Friend WithEvents DgvVW_Proveedor As DataGridView
+    Friend WithEvents LbSubTituloPanel As Label
 End Class

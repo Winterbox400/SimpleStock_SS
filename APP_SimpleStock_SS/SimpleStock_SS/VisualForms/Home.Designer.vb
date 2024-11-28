@@ -33,6 +33,7 @@ Partial Class Home
         Me.BtnVerStock = New System.Windows.Forms.Button()
         Me.BtnRegistroEntrada = New System.Windows.Forms.Button()
         Me.PnDivisor2 = New System.Windows.Forms.Panel()
+        Me.BtnClientes = New System.Windows.Forms.Button()
         Me.BtnCatalogoProductos = New System.Windows.Forms.Button()
         Me.BtnProveedoresProductos = New System.Windows.Forms.Button()
         Me.BtnMarcaProductos = New System.Windows.Forms.Button()
@@ -41,10 +42,12 @@ Partial Class Home
         Me.PnDivisor1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PnPrincipalDerecho = New System.Windows.Forms.Panel()
+        Me.PnBaseSubVentanas = New System.Windows.Forms.Panel()
         Me.PnLogoUsuario.SuspendLayout()
         CType(Me.PbMascota, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnBotonesIzquierdos.SuspendLayout()
         Me.PnContainerBtnAccioner.SuspendLayout()
+        Me.PnPrincipalDerecho.SuspendLayout()
         Me.SuspendLayout()
         '
         'PnLogoUsuario
@@ -55,14 +58,14 @@ Partial Class Home
         Me.PnLogoUsuario.Controls.Add(Me.PbMascota)
         Me.PnLogoUsuario.Location = New System.Drawing.Point(0, 0)
         Me.PnLogoUsuario.Name = "PnLogoUsuario"
-        Me.PnLogoUsuario.Size = New System.Drawing.Size(399, 215)
+        Me.PnLogoUsuario.Size = New System.Drawing.Size(399, 191)
         Me.PnLogoUsuario.TabIndex = 0
         '
         'LbRol
         '
         Me.LbRol.AutoSize = True
         Me.LbRol.Font = New System.Drawing.Font("HP Simplified Hans", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LbRol.Location = New System.Drawing.Point(10, 177)
+        Me.LbRol.Location = New System.Drawing.Point(10, 162)
         Me.LbRol.Name = "LbRol"
         Me.LbRol.Size = New System.Drawing.Size(175, 24)
         Me.LbRol.TabIndex = 1
@@ -72,7 +75,7 @@ Partial Class Home
         '
         Me.LbUsuario.AutoSize = True
         Me.LbUsuario.Font = New System.Drawing.Font("HP Simplified Hans", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LbUsuario.Location = New System.Drawing.Point(11, 153)
+        Me.LbUsuario.Location = New System.Drawing.Point(11, 138)
         Me.LbUsuario.Name = "LbUsuario"
         Me.LbUsuario.Size = New System.Drawing.Size(221, 24)
         Me.LbUsuario.TabIndex = 1
@@ -82,7 +85,7 @@ Partial Class Home
         '
         Me.PbMascota.BackColor = System.Drawing.Color.Transparent
         Me.PbMascota.Image = CType(resources.GetObject("PbMascota.Image"), System.Drawing.Image)
-        Me.PbMascota.Location = New System.Drawing.Point(100, 3)
+        Me.PbMascota.Location = New System.Drawing.Point(97, -12)
         Me.PbMascota.Name = "PbMascota"
         Me.PbMascota.Size = New System.Drawing.Size(180, 147)
         Me.PbMascota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -94,6 +97,7 @@ Partial Class Home
         Me.PnBotonesIzquierdos.BackColor = System.Drawing.Color.MediumSlateBlue
         Me.PnBotonesIzquierdos.Controls.Add(Me.PnContainerBtnAccioner)
         Me.PnBotonesIzquierdos.Controls.Add(Me.PnDivisor2)
+        Me.PnBotonesIzquierdos.Controls.Add(Me.BtnClientes)
         Me.PnBotonesIzquierdos.Controls.Add(Me.BtnCatalogoProductos)
         Me.PnBotonesIzquierdos.Controls.Add(Me.BtnProveedoresProductos)
         Me.PnBotonesIzquierdos.Controls.Add(Me.BtnMarcaProductos)
@@ -101,9 +105,9 @@ Partial Class Home
         Me.PnBotonesIzquierdos.Controls.Add(Me.BtnHome)
         Me.PnBotonesIzquierdos.Controls.Add(Me.PnDivisor1)
         Me.PnBotonesIzquierdos.Controls.Add(Me.Label1)
-        Me.PnBotonesIzquierdos.Location = New System.Drawing.Point(0, 215)
+        Me.PnBotonesIzquierdos.Location = New System.Drawing.Point(0, 189)
         Me.PnBotonesIzquierdos.Name = "PnBotonesIzquierdos"
-        Me.PnBotonesIzquierdos.Size = New System.Drawing.Size(399, 553)
+        Me.PnBotonesIzquierdos.Size = New System.Drawing.Size(399, 579)
         Me.PnBotonesIzquierdos.TabIndex = 1
         '
         'PnContainerBtnAccioner
@@ -113,7 +117,7 @@ Partial Class Home
         Me.PnContainerBtnAccioner.Controls.Add(Me.BtnRegistroSalida)
         Me.PnContainerBtnAccioner.Controls.Add(Me.BtnVerStock)
         Me.PnContainerBtnAccioner.Controls.Add(Me.BtnRegistroEntrada)
-        Me.PnContainerBtnAccioner.Location = New System.Drawing.Point(12, 335)
+        Me.PnContainerBtnAccioner.Location = New System.Drawing.Point(12, 367)
         Me.PnContainerBtnAccioner.Name = "PnContainerBtnAccioner"
         Me.PnContainerBtnAccioner.Size = New System.Drawing.Size(379, 206)
         Me.PnContainerBtnAccioner.TabIndex = 0
@@ -181,10 +185,29 @@ Partial Class Home
         'PnDivisor2
         '
         Me.PnDivisor2.BackColor = System.Drawing.Color.Crimson
-        Me.PnDivisor2.Location = New System.Drawing.Point(12, 326)
+        Me.PnDivisor2.Location = New System.Drawing.Point(12, 358)
         Me.PnDivisor2.Name = "PnDivisor2"
         Me.PnDivisor2.Size = New System.Drawing.Size(370, 3)
         Me.PnDivisor2.TabIndex = 2
+        '
+        'BtnClientes
+        '
+        Me.BtnClientes.BackColor = System.Drawing.Color.Transparent
+        Me.BtnClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnClientes.Cursor = System.Windows.Forms.Cursors.Default
+        Me.BtnClientes.FlatAppearance.BorderSize = 0
+        Me.BtnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnClientes.Font = New System.Drawing.Font("HP Simplified Hans", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnClientes.ForeColor = System.Drawing.Color.White
+        Me.BtnClientes.Image = CType(resources.GetObject("BtnClientes.Image"), System.Drawing.Image)
+        Me.BtnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnClientes.Location = New System.Drawing.Point(15, 249)
+        Me.BtnClientes.Name = "BtnClientes"
+        Me.BtnClientes.Size = New System.Drawing.Size(348, 48)
+        Me.BtnClientes.TabIndex = 3
+        Me.BtnClientes.Text = "             Catalogo de Clientes"
+        Me.BtnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnClientes.UseVisualStyleBackColor = False
         '
         'BtnCatalogoProductos
         '
@@ -197,7 +220,7 @@ Partial Class Home
         Me.BtnCatalogoProductos.ForeColor = System.Drawing.Color.White
         Me.BtnCatalogoProductos.Image = CType(resources.GetObject("BtnCatalogoProductos.Image"), System.Drawing.Image)
         Me.BtnCatalogoProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnCatalogoProductos.Location = New System.Drawing.Point(15, 272)
+        Me.BtnCatalogoProductos.Location = New System.Drawing.Point(15, 304)
         Me.BtnCatalogoProductos.Name = "BtnCatalogoProductos"
         Me.BtnCatalogoProductos.Size = New System.Drawing.Size(348, 48)
         Me.BtnCatalogoProductos.TabIndex = 3
@@ -216,7 +239,7 @@ Partial Class Home
         Me.BtnProveedoresProductos.ForeColor = System.Drawing.Color.White
         Me.BtnProveedoresProductos.Image = CType(resources.GetObject("BtnProveedoresProductos.Image"), System.Drawing.Image)
         Me.BtnProveedoresProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnProveedoresProductos.Location = New System.Drawing.Point(15, 216)
+        Me.BtnProveedoresProductos.Location = New System.Drawing.Point(15, 194)
         Me.BtnProveedoresProductos.Name = "BtnProveedoresProductos"
         Me.BtnProveedoresProductos.Size = New System.Drawing.Size(348, 50)
         Me.BtnProveedoresProductos.TabIndex = 3
@@ -235,7 +258,7 @@ Partial Class Home
         Me.BtnMarcaProductos.ForeColor = System.Drawing.Color.White
         Me.BtnMarcaProductos.Image = CType(resources.GetObject("BtnMarcaProductos.Image"), System.Drawing.Image)
         Me.BtnMarcaProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnMarcaProductos.Location = New System.Drawing.Point(15, 157)
+        Me.BtnMarcaProductos.Location = New System.Drawing.Point(15, 135)
         Me.BtnMarcaProductos.Name = "BtnMarcaProductos"
         Me.BtnMarcaProductos.Size = New System.Drawing.Size(348, 53)
         Me.BtnMarcaProductos.TabIndex = 3
@@ -254,7 +277,7 @@ Partial Class Home
         Me.BtnCategoriaProducto.ForeColor = System.Drawing.Color.White
         Me.BtnCategoriaProducto.Image = CType(resources.GetObject("BtnCategoriaProducto.Image"), System.Drawing.Image)
         Me.BtnCategoriaProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnCategoriaProducto.Location = New System.Drawing.Point(12, 99)
+        Me.BtnCategoriaProducto.Location = New System.Drawing.Point(12, 83)
         Me.BtnCategoriaProducto.Name = "BtnCategoriaProducto"
         Me.BtnCategoriaProducto.Size = New System.Drawing.Size(351, 52)
         Me.BtnCategoriaProducto.TabIndex = 3
@@ -273,7 +296,7 @@ Partial Class Home
         Me.BtnHome.ForeColor = System.Drawing.Color.White
         Me.BtnHome.Image = CType(resources.GetObject("BtnHome.Image"), System.Drawing.Image)
         Me.BtnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnHome.Location = New System.Drawing.Point(12, 40)
+        Me.BtnHome.Location = New System.Drawing.Point(12, 28)
         Me.BtnHome.Name = "BtnHome"
         Me.BtnHome.Size = New System.Drawing.Size(351, 53)
         Me.BtnHome.TabIndex = 3
@@ -284,7 +307,7 @@ Partial Class Home
         'PnDivisor1
         '
         Me.PnDivisor1.BackColor = System.Drawing.Color.Crimson
-        Me.PnDivisor1.Location = New System.Drawing.Point(12, 33)
+        Me.PnDivisor1.Location = New System.Drawing.Point(12, 23)
         Me.PnDivisor1.Name = "PnDivisor1"
         Me.PnDivisor1.Size = New System.Drawing.Size(370, 3)
         Me.PnDivisor1.TabIndex = 2
@@ -294,7 +317,7 @@ Partial Class Home
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("HP Simplified Hans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(12, 12)
+        Me.Label1.Location = New System.Drawing.Point(12, 2)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(191, 18)
         Me.Label1.TabIndex = 1
@@ -303,10 +326,19 @@ Partial Class Home
         'PnPrincipalDerecho
         '
         Me.PnPrincipalDerecho.BackColor = System.Drawing.Color.DodgerBlue
+        Me.PnPrincipalDerecho.Controls.Add(Me.PnBaseSubVentanas)
         Me.PnPrincipalDerecho.Location = New System.Drawing.Point(399, 0)
         Me.PnPrincipalDerecho.Name = "PnPrincipalDerecho"
         Me.PnPrincipalDerecho.Size = New System.Drawing.Size(968, 768)
         Me.PnPrincipalDerecho.TabIndex = 2
+        '
+        'PnBaseSubVentanas
+        '
+        Me.PnBaseSubVentanas.BackColor = System.Drawing.Color.AliceBlue
+        Me.PnBaseSubVentanas.Location = New System.Drawing.Point(21, 80)
+        Me.PnBaseSubVentanas.Name = "PnBaseSubVentanas"
+        Me.PnBaseSubVentanas.Size = New System.Drawing.Size(915, 640)
+        Me.PnBaseSubVentanas.TabIndex = 0
         '
         'Home
         '
@@ -326,6 +358,7 @@ Partial Class Home
         Me.PnBotonesIzquierdos.ResumeLayout(False)
         Me.PnBotonesIzquierdos.PerformLayout()
         Me.PnContainerBtnAccioner.ResumeLayout(False)
+        Me.PnPrincipalDerecho.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -348,4 +381,6 @@ Partial Class Home
     Friend WithEvents BtnRegistroEntrada As Button
     Friend WithEvents BtnRegistroSalida As Button
     Friend WithEvents BtnVerStock As Button
+    Friend WithEvents PnBaseSubVentanas As Panel
+    Friend WithEvents BtnClientes As Button
 End Class

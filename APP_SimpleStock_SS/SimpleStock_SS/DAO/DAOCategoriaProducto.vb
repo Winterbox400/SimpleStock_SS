@@ -1,18 +1,18 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class DAOMarcaProductos
+Public Class DAOCategoriaProducto
 
     Private Conn As New DBConnection()
 
-    ' Método para insertar Marcas en la base de datos
-    Public Sub InsertarMarca(nombre As String, descripcion As String, activo As Byte, idUsuarioRegistro As Integer)
+    ' Método para insertar Categoria en la base de datos
+    Public Sub InsertarCategoria(nombre As String, descripcion As String, activo As Byte, idUsuarioRegistro As Integer)
         Try
             ' Abrimos la conexión
             Conn.OpenConnection()
 
             ' Definimos la consulta TSQL con parámetros
-            Dim query As String = "SET NOCOUNT ON; INSERT INTO Marcas(Nombre, Descripcion, Activo, IdUsuarioRegistro, FechaRegistro)
-                                   VALUES (@nombre, @descripcion, @activo, @idUsuarioRegistro, GETDATE())"
+            Dim query As String = "SET NOCOUNT ON; INSERT INTO Categorias(Nombre, Descripcion, Activo, IdUsuarioRegistro, FechaRegistro)
+	                                                VALUES	(@nombre, @descripcion, @activo, @idUsuarioRegistro, GETDATE())"
 
             ' Creamos el comando con la consulta y la conexión
             Using command As New SqlCommand(query, Conn.Conexion)
@@ -27,22 +27,23 @@ Public Class DAOMarcaProductos
             End Using
         Catch ex As SqlException
             ' Mostramos el error en un cuadro de diálogo
-            MessageBox.Show("Error al insertar Marca: " & ex.Message)
+            MessageBox.Show("Error al insertar Categoria: " & ex.Message)
         Finally
             ' Cerramos la conexión
             Conn.CloseConnection()
         End Try
     End Sub
 
-    ' Metodo para Actualizar Marcas en la Base de datos
-    Public Sub ActualizarMarca(nombre As String, descripcion As String, idUsuarioActualiza As Integer, idMarca As Integer)
+
+    ' Metodo para Actualizar Categoria en la Base de datos
+    Public Sub ActualizarCategoria(nombre As String, descripcion As String, idUsuarioActualiza As Integer, idCategoria As Integer)
         Try
             ' Abrimos la conexión
             Conn.OpenConnection()
 
             ' Definimos la consulta TSQL con parámetros
-            Dim query As String = "SET NOCOUNT ON; UPDATE Marcas SET Nombre = @nombre, Descripcion = @descripcion,
-	                               IdUsuarioActualiza = @idUsuarioActualiza, FechaActualizacion = GETDATE() WHERE IdMarca = @idMarca"
+            Dim query As String = "SET NOCOUNT ON; UPDATE Categorias SET Nombre = @nombre, Descripcion = @descripcion,
+		                           IdUsuarioActualiza = @idUsuarioActualiza, FechaActualizacion = GETDATE() WHERE IdCategoria = @idCategoria"
 
             ' Creamos el comando con la consulta y la conexión
             Using command As New SqlCommand(query, Conn.Conexion)
@@ -50,41 +51,41 @@ Public Class DAOMarcaProductos
                 command.Parameters.AddWithValue("@nombre", nombre)
                 command.Parameters.AddWithValue("@descripcion", descripcion)
                 command.Parameters.AddWithValue("@idUsuarioActualiza", idUsuarioActualiza)
-                command.Parameters.AddWithValue("@idMarca", idMarca)
+                command.Parameters.AddWithValue("@idCategoria", idCategoria)
 
                 ' Ejecutamos la consulta
                 command.ExecuteNonQuery()
             End Using
         Catch ex As SqlException
             ' Mostramos el error en un cuadro de diálogo
-            MessageBox.Show("Error al actualizar Marca: " & ex.Message)
+            MessageBox.Show("Error al Actualizar Categoria: " & ex.Message)
         Finally
             ' Cerramos la conexión
             Conn.CloseConnection()
         End Try
     End Sub
 
-    ' Metodo para Eliminar Marcas en la Base de datos
-    Public Sub EliminarMarca(activo As Byte, idMarca As Integer)
+    ' Metodo para Eliminar Categoria en la Base de datos
+    Public Sub EliminarCategoria(activo As Byte, idCategoria As Integer)
         Try
             ' Abrimos la conexión
             Conn.OpenConnection()
 
             ' Definimos la consulta TSQL con parámetros
-            Dim query As String = "SET NOCOUNT ON; UPDATE Marcas SET Activo = @activo WHERE IdMarca = @idMarca"
+            Dim query As String = "SET NOCOUNT ON; UPDATE Categorias SET Activo = @activo WHERE IdCategoria = @idCategoria"
 
             ' Creamos el comando con la consulta y la conexión
             Using command As New SqlCommand(query, Conn.Conexion)
                 ' Agregamos los parámetros
                 command.Parameters.AddWithValue("@activo", activo)
-                command.Parameters.AddWithValue("@idMarca", idMarca)
+                command.Parameters.AddWithValue("@idCategoria", idCategoria)
 
                 ' Ejecutamos la consulta
                 command.ExecuteNonQuery()
             End Using
         Catch ex As SqlException
             ' Mostramos el error en un cuadro de diálogo
-            MessageBox.Show("Error al eliminar Marca: " & ex.Message)
+            MessageBox.Show("Error al eliminar Categoria: " & ex.Message)
         Finally
             ' Cerramos la conexión
             Conn.CloseConnection()
@@ -97,7 +98,7 @@ Public Class DAOMarcaProductos
             ' Abrimos la conexión
             Conn.OpenConnection()
 
-            Dim query As String = "SELECT * FROM vw_Marcas"
+            Dim query As String = "SELECT * FROM vw_Categorias"
 
             Dim adaptador As New SqlDataAdapter(query, Conn.Conexion) 'Adaptamos la consulta con la conexión
             Dim dataTable As New DataTable() 'Creamos un tabla de datos con la consulta

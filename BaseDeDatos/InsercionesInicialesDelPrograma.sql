@@ -63,3 +63,44 @@ GO
 
 --SELECT * FROM vw_Marcas
 --GO
+
+
+/*CATEGORIAS*/
+SELECT * FROM Categorias
+GO
+
+--INSERT INTO Categorias(Nombre, Descripcion, Activo, IdUsuarioRegistro, FechaRegistro)
+--	VALUES	(@nombre, @descripcion, @activo, @idUsuarioRegistro, GETDATE())
+--GO
+
+
+--UPDATE Categorias SET Nombre = @nombre, Descripcion = @descripcion,
+--		IdUsuarioActualiza = @idUsuarioActualiza, FechaActualizacion = GETDATE()
+--		WHERE IdCategoria = @idCategoria
+--GO
+
+--UPDATE Categorias
+--SET Activo = @activo
+--	WHERE IdCategoria = @idCategoria
+--GO
+
+--SELECT * FROM vw_Categorias
+--GO
+
+/*CLIENTES*/
+--SELECT * FROM Clientes
+--GO
+--SELECT * FROM vw_Clientes
+--GO
+
+--INSERT INTO Clientes(Nombre, Telefono, Correo, Activo, IdUsuarioRegistro, FechaRegistro)
+--	VALUES (@nombre, @telefono, @correo, @activo, @idUsuarioRegistro, GETDATE())
+--GO
+
+--UPDATE Clientes SET Nombre = @nombre, Telefono = @telefono, Correo = @correo,
+--		IdUsuarioActualiza = @idUsuarioActualiza, FechaActualizacion = GETDATE()
+--		WHERE IdCliente = @idCliente
+--GO
+
+--UPDATE Clientes SET Activo = 1 WHERE IdCliente = 1
+--GO

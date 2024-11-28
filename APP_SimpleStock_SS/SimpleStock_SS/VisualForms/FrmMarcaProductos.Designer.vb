@@ -28,6 +28,7 @@ Partial Class FrmMarcaProductos
         Me.BtnCambiarMarca = New System.Windows.Forms.Button()
         Me.BtnEliminarMarca = New System.Windows.Forms.Button()
         Me.PnConteinerMarca = New System.Windows.Forms.Panel()
+        Me.LbSubTituloPanel = New System.Windows.Forms.Label()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.PnDescripcionMarca = New System.Windows.Forms.Panel()
         Me.TbDescripcionMarca = New System.Windows.Forms.TextBox()
@@ -89,6 +90,7 @@ Partial Class FrmMarcaProductos
         'PnConteinerMarca
         '
         Me.PnConteinerMarca.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.PnConteinerMarca.Controls.Add(Me.LbSubTituloPanel)
         Me.PnConteinerMarca.Controls.Add(Me.BtnGuardar)
         Me.PnConteinerMarca.Controls.Add(Me.PnDescripcionMarca)
         Me.PnConteinerMarca.Controls.Add(Me.PnNombreMarca)
@@ -96,6 +98,16 @@ Partial Class FrmMarcaProductos
         Me.PnConteinerMarca.Name = "PnConteinerMarca"
         Me.PnConteinerMarca.Size = New System.Drawing.Size(856, 217)
         Me.PnConteinerMarca.TabIndex = 2
+        '
+        'LbSubTituloPanel
+        '
+        Me.LbSubTituloPanel.AutoSize = True
+        Me.LbSubTituloPanel.Font = New System.Drawing.Font("HP Simplified Hans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbSubTituloPanel.Location = New System.Drawing.Point(39, 7)
+        Me.LbSubTituloPanel.Name = "LbSubTituloPanel"
+        Me.LbSubTituloPanel.Size = New System.Drawing.Size(71, 22)
+        Me.LbSubTituloPanel.TabIndex = 4
+        Me.LbSubTituloPanel.Text = "Label1"
         '
         'BtnGuardar
         '
@@ -182,6 +194,7 @@ Partial Class FrmMarcaProductos
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "FrmMarcaProductos"
         Me.PnConteinerMarca.ResumeLayout(False)
+        Me.PnConteinerMarca.PerformLayout()
         Me.PnDescripcionMarca.ResumeLayout(False)
         Me.PnDescripcionMarca.PerformLayout()
         Me.PnNombreMarca.ResumeLayout(False)
@@ -203,4 +216,5 @@ Partial Class FrmMarcaProductos
     Friend WithEvents PnDescripcionMarca As Panel
     Friend WithEvents TbDescripcionMarca As TextBox
     Friend WithEvents BtnGuardar As Button
+    Friend WithEvents LbSubTituloPanel As Label
 End Class
