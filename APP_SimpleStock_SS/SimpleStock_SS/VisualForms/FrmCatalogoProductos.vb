@@ -51,8 +51,13 @@
     End Sub
 
     Private Sub BtnCrearNuevoProducto_Click(sender As Object, e As EventArgs) Handles BtnCrearNuevoProducto.Click
-        Dim Prueba As FrmCatalogoProductos_Nuevo = FrmCatalogoProductos_Nuevo.InstanciaCatalogoProductos_Nuevo
-        Prueba.Show()
-        Me.Dispose()
+
+        Dim formCatalogoProductos_Nuevo As FrmCatalogoProductos_Nuevo = FrmCatalogoProductos_Nuevo.InstanciaCatalogoProductos_Nuevo 'Crea una variable de la instancia singleton
+        formCatalogoProductos_Nuevo.Owner = Me 'Hace a la instancia del Formulario Proveedor Productos hija de Home
+        formCatalogoProductos_Nuevo.Show() ' Muestra el formulario en la pantalla
+        formCatalogoProductos_Nuevo.BringToFront() ' Manda el formulario enfrente del padre (Home)
+
+        formCatalogoProductos_Nuevo.Show()
+        Me.Hide()
     End Sub
 End Class

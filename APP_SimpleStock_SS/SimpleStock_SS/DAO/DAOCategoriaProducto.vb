@@ -122,39 +122,50 @@ Public Class DAOCategoriaProducto
 
     End Sub
 
-    'Metodo para Agregar valores a un ComboBox
-    Public Sub PruebaComboBox(Marcas As ComboBox)
+    'Metodo para mostrar Valores en ComboBox
+    Public Sub LlenarComboBox(Categoria As ComboBox)
         Try
-            'Abrimos la conexión
+            ' Abrimos la conexión
             Conn.OpenConnection()
 
-            'Definimos la Consulta TSQL
-            Dim query As String = "SELECT * FROM vCBoxCategorias"
+            ' Definimos la Consulta TSQL
+            Dim query As String = "SELECT * FROM vCBoxCategorias ORDER BY Nombre"
 
             ' Creamos el comando con la consulta y la conexión
             Using command As New SqlDataAdapter(query, Conn.Conexion)
 
-                ' Creamos un DataSet como Contenedor de valores
-                Dim data As New DataSet
+                ' Creamos un DataTable como contenedor de valores
+                Dim data As New DataTable
 
-                ' Rellenamos el DataSet con la consulta
+                ' Rellenamos el DataTable con la consulta
                 command.Fill(data)
 
-                ' Mandamos a agregar los datos al ComboBox asignado
-                Marcas.DataSource = data.Tables(0) 'Asigna de donde va a venir la información
-                Marcas.DisplayMember = "Categoria" 'Asigna el valor que se mostrará en el ComboBox
-                Marcas.ValueMember = "Id" 'Guarda el Id del Valor seleccionado en el ComboBox
+                ' Crear un nuevo DataTable para incluir el valor personalizado
+                Dim customData As New DataTable
+                customData.Columns.Add("IdCategoria", GetType(Integer)) ' Columna para el Id
+                customData.Columns.Add("Nombre", GetType(String))       ' Columna para el Nombre
+
+                ' Agregar el valor inicial manualmente
+                customData.Rows.Add(DBNull.Value, "Categorias") ' Valor inicial (sin Id)
+
+                ' Agregar los valores traídos desde la base de datos
+                For Each row As DataRow In data.Rows
+                    customData.ImportRow(row)
+                Next
+
+                ' Asignar el nuevo DataTable al ComboBox
+                Categoria.DataSource = customData
+                Categoria.DisplayMember = "Nombre"  ' Lo que se muestra en el ComboBox
+                Categoria.ValueMember = "IdCategoria" ' El valor seleccionado
             End Using
 
         Catch ex As SqlException
             ' Mostramos el error en un cuadro de diálogo
-            MessageBox.Show("Error al Cargar ComboBox: " & ex.Message)
+            MessageBox.Show("Error al cargar ComboBox: " & ex.Message)
         Finally
             ' Cerramos la conexión
             Conn.CloseConnection()
         End Try
-
     End Sub
-
 
 End Class

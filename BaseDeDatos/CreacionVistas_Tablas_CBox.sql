@@ -89,11 +89,12 @@ se dejará dentro de la vista la clausula de que solo se mostrarán las categorías
 */
 CREATE VIEW vCBoxCategorias AS
 SELECT
-C.IdCategoria AS Id,
-C.Nombre AS Categoria
+C.IdCategoria,
+C.Nombre
 FROM Categorias C
 WHERE C.Activo = 1
 GO
+
 
 /*Mostrar valores en ComboBox de Marcas
 Se mostrará los registros de la tabla Marcas en "Formulario Nuevo Producto" y "Actualizar Un Producto"
@@ -102,8 +103,8 @@ se dejará dentro de la vista la clausula de que solo se mostrarán las categorías
 */
 CREATE VIEW vCBoxMarcas AS
 SELECT
-M.IdMarca AS Id,
-M.Nombre AS Marca
+M.IdMarca,
+M.Nombre
 FROM Marcas M
 WHERE M.Activo = 1
 GO
@@ -115,8 +116,8 @@ se dejará dentro de la vista la clausula de que solo se mostrarán las categorías
 */
 CREATE VIEW vCBoxProveedores AS
 SELECT
-PE.IdProveedor AS Id,
-PE.Nombre AS Proveedor
+PE.IdProveedor ,
+PE.Nombre
 FROM Proveedores PE
 WHERE PE.Activo = 1
 GO

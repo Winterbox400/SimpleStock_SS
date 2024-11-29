@@ -121,4 +121,52 @@ Public Class DAOMarcaProductos
 
     End Sub
 
+    'Metodo para mostrar Valores en ComboBox
+    Public Sub LlenarComboBox(Marcas As ComboBox)
+        Try
+            ' Abrimos la conexión
+            Conn.OpenConnection()
+
+            ' Definimos la Consulta TSQL
+            Dim query As String = "SELECT * FROM vCBoxMarcas ORDER BY Nombre"
+
+            ' Creamos el comando con la consulta y la conexión
+            Using command As New SqlDataAdapter(query, Conn.Conexion)
+
+                ' Creamos un DataTable como contenedor de valores
+                Dim data As New DataTable
+
+                ' Rellenamos el DataTable con la consulta
+                command.Fill(data)
+
+                ' Crear un nuevo DataTable para incluir el valor personalizado
+                Dim customData As New DataTable
+                customData.Columns.Add("IdMarca", GetType(Integer)) ' Columna para el Id
+                customData.Columns.Add("Nombre", GetType(String))       ' Columna para el Nombre
+
+                ' Agregar el valor inicial manualmente
+                customData.Rows.Add(DBNull.Value, "Marcas") ' Valor inicial (sin Id)
+
+                ' Agregar los valores traídos desde la base de datos
+                For Each row As DataRow In data.Rows
+                    customData.ImportRow(row)
+                Next
+
+                ' Asignar el nuevo DataTable al ComboBox
+                Marcas.DataSource = customData
+                Marcas.DisplayMember = "Nombre"  ' Lo que se muestra en el ComboBox
+                Marcas.ValueMember = "IdMarca" ' El valor seleccionado
+            End Using
+
+        Catch ex As SqlException
+            ' Mostramos el error en un cuadro de diálogo
+            MessageBox.Show("Error al cargar ComboBox: " & ex.Message)
+        Finally
+            ' Cerramos la conexión
+            Conn.CloseConnection()
+        End Try
+    End Sub
+
+
+
 End Class
