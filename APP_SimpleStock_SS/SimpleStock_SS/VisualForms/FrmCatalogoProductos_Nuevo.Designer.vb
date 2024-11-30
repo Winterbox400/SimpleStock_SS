@@ -24,6 +24,10 @@ Partial Class FrmCatalogoProductos_Nuevo
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCatalogoProductos_Nuevo))
         Me.PnConteinerPrincipal = New System.Windows.Forms.Panel()
+        Me.LbTituloForm = New System.Windows.Forms.Label()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.CbProveedores = New System.Windows.Forms.ComboBox()
+        Me.CbMarcasProductos = New System.Windows.Forms.ComboBox()
         Me.CbCategoriaProducto = New System.Windows.Forms.ComboBox()
         Me.PnDescripcionProductos = New System.Windows.Forms.Panel()
         Me.TbDescripcionProductos = New System.Windows.Forms.TextBox()
@@ -33,10 +37,6 @@ Partial Class FrmCatalogoProductos_Nuevo
         Me.TbAlmacenProducto = New System.Windows.Forms.TextBox()
         Me.PnNombreProductos = New System.Windows.Forms.Panel()
         Me.TbNombreProductos = New System.Windows.Forms.TextBox()
-        Me.CbMarcasProductos = New System.Windows.Forms.ComboBox()
-        Me.CbProveedores = New System.Windows.Forms.ComboBox()
-        Me.BtnGuardar = New System.Windows.Forms.Button()
-        Me.LbTituloForm = New System.Windows.Forms.Label()
         Me.PnConteinerPrincipal.SuspendLayout()
         Me.PnDescripcionProductos.SuspendLayout()
         Me.PnUbicacionProducto.SuspendLayout()
@@ -60,6 +60,53 @@ Partial Class FrmCatalogoProductos_Nuevo
         Me.PnConteinerPrincipal.Name = "PnConteinerPrincipal"
         Me.PnConteinerPrincipal.Size = New System.Drawing.Size(891, 588)
         Me.PnConteinerPrincipal.TabIndex = 8
+        '
+        'LbTituloForm
+        '
+        Me.LbTituloForm.AutoSize = True
+        Me.LbTituloForm.Font = New System.Drawing.Font("Baloo", 36.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbTituloForm.Location = New System.Drawing.Point(8, 6)
+        Me.LbTituloForm.Name = "LbTituloForm"
+        Me.LbTituloForm.Size = New System.Drawing.Size(766, 75)
+        Me.LbTituloForm.TabIndex = 5
+        Me.LbTituloForm.Text = "FORMULARIO NUEVO PRODUCTO"
+        '
+        'BtnGuardar
+        '
+        Me.BtnGuardar.BackgroundImage = CType(resources.GetObject("BtnGuardar.BackgroundImage"), System.Drawing.Image)
+        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnGuardar.FlatAppearance.BorderSize = 0
+        Me.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnGuardar.Location = New System.Drawing.Point(664, 355)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(176, 158)
+        Me.BtnGuardar.TabIndex = 4
+        Me.BtnGuardar.UseVisualStyleBackColor = True
+        '
+        'CbProveedores
+        '
+        Me.CbProveedores.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.CbProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CbProveedores.Font = New System.Drawing.Font("HP Simplified Hans", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CbProveedores.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.CbProveedores.FormattingEnabled = True
+        Me.CbProveedores.Location = New System.Drawing.Point(648, 279)
+        Me.CbProveedores.Name = "CbProveedores"
+        Me.CbProveedores.Size = New System.Drawing.Size(200, 32)
+        Me.CbProveedores.TabIndex = 3
+        '
+        'CbMarcasProductos
+        '
+        Me.CbMarcasProductos.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.CbMarcasProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CbMarcasProductos.Font = New System.Drawing.Font("HP Simplified Hans", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CbMarcasProductos.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.CbMarcasProductos.FormattingEnabled = True
+        Me.CbMarcasProductos.Location = New System.Drawing.Point(648, 204)
+        Me.CbMarcasProductos.Name = "CbMarcasProductos"
+        Me.CbMarcasProductos.Size = New System.Drawing.Size(200, 32)
+        Me.CbMarcasProductos.TabIndex = 3
         '
         'CbCategoriaProducto
         '
@@ -152,53 +199,6 @@ Partial Class FrmCatalogoProductos_Nuevo
         Me.TbNombreProductos.Size = New System.Drawing.Size(558, 31)
         Me.TbNombreProductos.TabIndex = 0
         Me.TbNombreProductos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'CbMarcasProductos
-        '
-        Me.CbMarcasProductos.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.CbMarcasProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CbMarcasProductos.Font = New System.Drawing.Font("HP Simplified Hans", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CbMarcasProductos.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.CbMarcasProductos.FormattingEnabled = True
-        Me.CbMarcasProductos.Location = New System.Drawing.Point(648, 204)
-        Me.CbMarcasProductos.Name = "CbMarcasProductos"
-        Me.CbMarcasProductos.Size = New System.Drawing.Size(200, 32)
-        Me.CbMarcasProductos.TabIndex = 3
-        '
-        'CbProveedores
-        '
-        Me.CbProveedores.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.CbProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CbProveedores.Font = New System.Drawing.Font("HP Simplified Hans", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CbProveedores.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.CbProveedores.FormattingEnabled = True
-        Me.CbProveedores.Location = New System.Drawing.Point(648, 279)
-        Me.CbProveedores.Name = "CbProveedores"
-        Me.CbProveedores.Size = New System.Drawing.Size(200, 32)
-        Me.CbProveedores.TabIndex = 3
-        '
-        'BtnGuardar
-        '
-        Me.BtnGuardar.BackgroundImage = CType(resources.GetObject("BtnGuardar.BackgroundImage"), System.Drawing.Image)
-        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnGuardar.FlatAppearance.BorderSize = 0
-        Me.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnGuardar.Location = New System.Drawing.Point(664, 355)
-        Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(176, 158)
-        Me.BtnGuardar.TabIndex = 4
-        Me.BtnGuardar.UseVisualStyleBackColor = True
-        '
-        'LbTituloForm
-        '
-        Me.LbTituloForm.AutoSize = True
-        Me.LbTituloForm.Font = New System.Drawing.Font("Baloo", 36.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LbTituloForm.Location = New System.Drawing.Point(8, 6)
-        Me.LbTituloForm.Name = "LbTituloForm"
-        Me.LbTituloForm.Size = New System.Drawing.Size(766, 75)
-        Me.LbTituloForm.TabIndex = 5
-        Me.LbTituloForm.Text = "FORMULARIO NUEVO PRODUCTO"
         '
         'FrmCatalogoProductos_Nuevo
         '

@@ -73,6 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DAOCatalogoProducto.vb" />
     <Compile Include="DAO\DAOClientes.vb" />
     <Compile Include="DAO\DAOCategoriaProducto.vb" />
     <Compile Include="DAO\DAOMarcaProductos.vb" />

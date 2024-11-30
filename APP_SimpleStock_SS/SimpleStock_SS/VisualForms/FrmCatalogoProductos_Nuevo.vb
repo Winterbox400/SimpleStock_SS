@@ -73,5 +73,7 @@
     Dim DAOMarcasProductos As New DAOMarcaProductos()
     Dim DAOProveedorProducto As New DAOProveedorProducto
 
+    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
 
+    End Sub
 End Class
