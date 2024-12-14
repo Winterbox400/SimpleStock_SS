@@ -29,6 +29,7 @@
         FrmCategoriaProductos.InstanciaCategoriaProductos.Hide()
         FrmClientes.InstanciaClientes.Hide()
         FrmCatalogoProductos.InstanciaCatalogoProductos.Hide()
+        FrmRegistroEntrada.InstanciaRegistroEntrada.Hide()
 
         If OpenDoor = 0 Then
             Dim formMarca As FrmMarcaProductos = FrmMarcaProductos.InstanciaMarcaProductos 'Crea una variable de la instancia singleton
@@ -43,6 +44,7 @@
         FrmCategoriaProductos.InstanciaCategoriaProductos.Hide()
         FrmClientes.InstanciaClientes.Hide()
         FrmCatalogoProductos.InstanciaCatalogoProductos.Hide()
+        FrmRegistroEntrada.InstanciaRegistroEntrada.Hide()
 
         If OpenDoor = 0 Then
             Dim formProveedor As FrmProveedoresProductos = FrmProveedoresProductos.InstanciaProveedorProducto 'Crea una variable de la instancia singleton
@@ -58,6 +60,7 @@
         FrmProveedoresProductos.InstanciaProveedorProducto.Hide()
         FrmClientes.InstanciaClientes.Hide()
         FrmCatalogoProductos.InstanciaCatalogoProductos.Hide()
+        FrmRegistroEntrada.InstanciaRegistroEntrada.Hide()
 
         If OpenDoor = 0 Then
             Dim formCategoria As FrmCategoriaProductos = FrmCategoriaProductos.InstanciaCategoriaProductos 'Crea una variable de la instancia singleton
@@ -72,6 +75,7 @@
         FrmCategoriaProductos.InstanciaCategoriaProductos.Hide()
         FrmProveedoresProductos.InstanciaProveedorProducto.Hide()
         FrmCatalogoProductos.InstanciaCatalogoProductos.Hide()
+        FrmRegistroEntrada.InstanciaRegistroEntrada.Hide()
 
         If OpenDoor = 0 Then
 
@@ -88,6 +92,7 @@
         FrmCategoriaProductos.InstanciaCategoriaProductos.Hide()
         FrmProveedoresProductos.InstanciaProveedorProducto.Hide()
         FrmClientes.InstanciaClientes.Hide()
+        FrmRegistroEntrada.InstanciaRegistroEntrada.Hide()
 
         If OpenDoor = 0 Then
             Dim formCatalogoProductos As FrmCatalogoProductos = FrmCatalogoProductos.InstanciaCatalogoProductos 'Crea una variable de la instancia singleton
@@ -103,5 +108,22 @@
         If result = DialogResult.Yes Then
             Application.Exit()
         End If
+    End Sub
+
+    Private Sub BtnRegistroEntrada_Click(sender As Object, e As EventArgs) Handles BtnRegistroEntrada.Click
+        FrmMarcaProductos.InstanciaMarcaProductos.Hide()
+        FrmCategoriaProductos.InstanciaCategoriaProductos.Hide()
+        FrmProveedoresProductos.InstanciaProveedorProducto.Hide()
+        FrmClientes.InstanciaClientes.Hide()
+        FrmCatalogoProductos.InstanciaCatalogoProductos.Hide()
+
+        If OpenDoor = 0 Then
+            Dim forRegistroEntrada As FrmRegistroEntrada = FrmRegistroEntrada.InstanciaRegistroEntrada 'Crea una variable de la instancia singleton
+            forRegistroEntrada.Owner = Me 'Hace a la instancia del Formulario Proveedor Productos hija de Home
+            forRegistroEntrada.Show() ' Muestra el formulario en la pantalla
+            forRegistroEntrada.BringToFront() ' Manda el formulario enfrente del padre (Home)
+        End If
+
+
     End Sub
 End Class

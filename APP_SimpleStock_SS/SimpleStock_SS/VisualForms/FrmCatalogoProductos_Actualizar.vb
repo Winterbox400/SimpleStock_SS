@@ -95,6 +95,7 @@
         MessageBox.Show("Valores guardados correctamente", "Nuevo Categoria Agregada", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         OpenDoor = 0
+        LimpiarProductoGlobal()
         Dim formCatalogoProductos As FrmCatalogoProductos = FrmCatalogoProductos.InstanciaCatalogoProductos
         DAOCatalogoProductos.LlenarGrid(formCatalogoProductos.DgvVW_Productos)
         Me.Dispose()
@@ -104,8 +105,10 @@
     ' Este boton cierra el formulario actual y nos regresa al formulario principal
     Private Sub BtnBackForm_Click(sender As Object, e As EventArgs) Handles BtnBackForm.Click
         OpenDoor = 0
+        LimpiarProductoGlobal()
         Dim formCatalogoProductos As FrmCatalogoProductos = FrmCatalogoProductos.InstanciaCatalogoProductos
         Me.Dispose()
         formCatalogoProductos.Show()
     End Sub
+
 End Class

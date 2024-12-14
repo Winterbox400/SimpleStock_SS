@@ -125,3 +125,51 @@ PE.Nombre
 FROM Proveedores PE
 WHERE PE.Activo = 1
 GO
+
+/*Mostrar valores en ComboBox de Proveedores
+Se mostrará los registros de la tabla Proveedores en "Formulario Nuevo Producto" y "Actualizar Un Producto"
+esto atravez de un ComboBox, dado que el usuario administrador puede Crear, Actualizar o Eliminar categorías
+se dejará dentro de la vista la clausula de que solo se mostrarán las categorías activas.
+*/
+CREATE VIEW vCBoxTipoEntrada AS
+SELECT
+TES.IdTipo,
+TES.Tipo
+FROM TipoEntradaSalida TES
+WHERE TES.Activo = 1 AND (TES.IdTipo = 1 OR TES.IdTipo = 2)
+GO
+
+/*Mostrar valores en ComboBox de Proveedores
+Se mostrará los registros de la tabla Proveedores en "Formulario Nuevo Producto" y "Actualizar Un Producto"
+esto atravez de un ComboBox, dado que el usuario administrador puede Crear, Actualizar o Eliminar categorías
+se dejará dentro de la vista la clausula de que solo se mostrarán las categorías activas.
+*/
+CREATE VIEW vCBoxTipoSalida AS
+SELECT
+TES.IdTipo,
+TES.Tipo
+FROM TipoEntradaSalida TES
+WHERE TES.Activo = 1 AND (TES.IdTipo = 3 OR TES.IdTipo = 4 OR TES.IdTipo = 5)
+GO
+
+SELECT * FROM vCBoxTipoSalida
+
+/*Mostrar datos de la tabla "Registro de Entrada"
+Al ser datos que el usuario administrador puede crear, modificar u eliminar dentro de la aplicación
+Se condiciono de que solo se puedan mostrar los datos "Activos" dentro de la tabla, Además 
+se realizo la unión con las tablas Productos de las cuales solo se mostrará el campo nombre
+(Estos campos serán agregados por medio de ComboBox en la UI)
+*/
+CREATE VIEW vw_RegistroEntrada AS
+SELECT
+P.IdProducto AS 'ID',
+P.Nombre AS 'Producto',
+DRE.Cantidad,
+DRE.PrecioCompra AS Precio,
+P.Descripcion,
+M.Nombre AS 'Marca'
+FROM DetalleRegistroEntrada DRE
+INNER JOIN Productos P ON P.IdProducto = DRE.IdProducto
+INNER JOIN Marcas M ON M.IdMarca = P.IdMarca
+WHERE DRE.Activo = 1
+GO

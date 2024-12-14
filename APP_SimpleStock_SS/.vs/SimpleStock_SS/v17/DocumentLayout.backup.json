@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|c:\\winterbox400\\proyectosserios\\repositoriosimplestock_ss\\app_simplestock_ss\\simplestock_ss\\visualforms\\home.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\visualforms\\home.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|c:\\winterbox400\\proyectosserios\\repositoriosimplestock_ss\\app_simplestock_ss\\simplestock_ss\\modelos\\productos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\modelos\\productos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|c:\\winterbox400\\proyectosserios\\repositoriosimplestock_ss\\app_simplestock_ss\\simplestock_ss\\visualforms\\home.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\visualforms\\home.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|c:\\winterbox400\\proyectosserios\\repositoriosimplestock_ss\\app_simplestock_ss\\simplestock_ss\\visualforms\\frmregistroentrada.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\visualforms\\frmregistroentrada.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|c:\\winterbox400\\proyectosserios\\repositoriosimplestock_ss\\app_simplestock_ss\\simplestock_ss\\visualforms\\frmclientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\visualforms\\frmclientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\simplestock_ss\\utilidades\\variablesglobales.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\utilidades\\variablesglobales.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|c:\\winterbox400\\proyectosserios\\repositoriosimplestock_ss\\app_simplestock_ss\\simplestock_ss\\visualforms\\frmregistroentrada.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\visualforms\\frmregistroentrada.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,52 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Home.vb",
-              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\Home.vb",
-              "RelativeDocumentMoniker": "SimpleStock_SS\\VisualForms\\Home.vb",
-              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\Home.vb",
-              "RelativeToolTip": "SimpleStock_SS\\VisualForms\\Home.vb",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAqwGcAAAAeAAAAAAAAAA==",
+              "Title": "Productos.vb",
+              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\Modelos\\Productos.vb",
+              "RelativeDocumentMoniker": "SimpleStock_SS\\Modelos\\Productos.vb",
+              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\Modelos\\Productos.vb",
+              "RelativeToolTip": "SimpleStock_SS\\Modelos\\Productos.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-12-14T05:41:17.232Z",
+              "WhenOpened": "2024-12-14T11:15:38.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmRegistroEntrada.vb",
+              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\FrmRegistroEntrada.vb",
+              "RelativeDocumentMoniker": "SimpleStock_SS\\VisualForms\\FrmRegistroEntrada.vb",
+              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\FrmRegistroEntrada.vb",
+              "RelativeToolTip": "SimpleStock_SS\\VisualForms\\FrmRegistroEntrada.vb",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAYwFgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-12-14T08:38:40.259Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FrmClientes.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\FrmClientes.vb",
-              "RelativeDocumentMoniker": "SimpleStock_SS\\VisualForms\\FrmClientes.vb",
-              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\FrmClientes.vb [Dise\u00F1o]",
-              "RelativeToolTip": "SimpleStock_SS\\VisualForms\\FrmClientes.vb [Dise\u00F1o]",
+              "Title": "FrmRegistroEntrada.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\FrmRegistroEntrada.vb",
+              "RelativeDocumentMoniker": "SimpleStock_SS\\VisualForms\\FrmRegistroEntrada.vb",
+              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\FrmRegistroEntrada.vb [Dise\u00F1o]",
+              "RelativeToolTip": "SimpleStock_SS\\VisualForms\\FrmRegistroEntrada.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-12-14T05:39:25.174Z",
+              "WhenOpened": "2024-12-14T08:30:33.08Z",
               "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Home.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\Home.vb",
-              "RelativeDocumentMoniker": "SimpleStock_SS\\VisualForms\\Home.vb",
-              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\Home.vb [Dise\u00F1o]",
-              "RelativeToolTip": "SimpleStock_SS\\VisualForms\\Home.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-12-14T05:39:12.772Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "VariablesGlobales.vb",
-              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\Utilidades\\VariablesGlobales.vb",
-              "RelativeDocumentMoniker": "SimpleStock_SS\\Utilidades\\VariablesGlobales.vb",
-              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\Utilidades\\VariablesGlobales.vb",
-              "RelativeToolTip": "SimpleStock_SS\\Utilidades\\VariablesGlobales.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAA6wAYAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-12-14T04:29:05.471Z",
-              "EditorCaption": ""
             }
           ]
         }

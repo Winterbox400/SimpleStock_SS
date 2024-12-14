@@ -92,6 +92,7 @@
 
         OpenDoor = 0
         Dim formCatalogoProductos As FrmCatalogoProductos = FrmCatalogoProductos.InstanciaCatalogoProductos
+        DAOCatalogoProductos.LlenarGrid(formCatalogoProductos.DgvVW_Productos)
         Me.Dispose()
         formCatalogoProductos.Show()
     End Sub

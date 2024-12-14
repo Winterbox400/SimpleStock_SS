@@ -16,8 +16,14 @@ INSERT INTO Usuarios(Nombre, Contraseña, IdRol)
 			('Khaous Lios', 'Requiem', 3)
 GO
 
-
-
+/*INSERSION DE TIPO_REGISTROS*/
+INSERT INTO TipoEntradaSalida(Tipo, Descripcion, Activo, IdUsuarioRegistro, FechaRegistro)
+	VALUES	('Compra', 'Compras a Proveedores para reavastecer Stock', 1, 1, GETDATE()),
+			('D/S Compra', 'Devoluciones hechas por nuestros Clientes', 1, 1, GETDATE()),
+			('T/G', 'Activos Dañados o Caducados dados por gasto', 1, 1, GETDATE()),
+			('Venta', 'Ventas a Clientes, reducen el Stock', 1, 1, GETDATE()),
+			('D/S Venta', 'Devoluciones hechas a nuestros Proveedores', 1, 1, GETDATE())
+GO
 
 
 --/*EL SIGUIENTE CONTENIDO DE ABAJO SERA ELIMINADO EN EL PROXIMO COMMIT*/
@@ -107,10 +113,10 @@ GO
 
 
 /*INSERSION DE CATALOGO PRODUCTOS*/
-USE BD_SimpleStock_SS
-GO
-SELECT * FROM Productos
-GO
+--USE BD_SimpleStock_SS
+--GO
+--SELECT * FROM Productos
+--GO
 
 ----Insersion Nuevo Producto
 --INSERT INTO Productos(Nombre, Descripcion, Almacen, Ubicacion, IdCategoria, IdMarca, IdProveedore, Activo, IdUsuarioRegistro, FechaRegistro)
@@ -122,4 +128,18 @@ GO
 --GO
 
 --UPDATE Productos SET Activo = @activo WHERE IdProducto = @idProducto
+--GO
+
+
+
+
+
+
+SELECT * FROM RegistroEntradas
+SELECT * FROM DetalleRegistroEntrada
+SELECT * FROM Productos
+GO
+
+--SELECT * FROM MovimientosInventario
+--SELECT * FROM StockInventario
 --GO

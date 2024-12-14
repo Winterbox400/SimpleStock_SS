@@ -42,8 +42,8 @@ Partial Class Home
         Me.PnDivisor1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PnPrincipalDerecho = New System.Windows.Forms.Panel()
-        Me.PnBaseSubVentanas = New System.Windows.Forms.Panel()
         Me.BtnSalir = New System.Windows.Forms.Button()
+        Me.PnBaseSubVentanas = New System.Windows.Forms.Panel()
         Me.PnLogoUsuario.SuspendLayout()
         CType(Me.PbMascota, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnBotonesIzquierdos.SuspendLayout()
@@ -334,14 +334,6 @@ Partial Class Home
         Me.PnPrincipalDerecho.Size = New System.Drawing.Size(968, 768)
         Me.PnPrincipalDerecho.TabIndex = 2
         '
-        'PnBaseSubVentanas
-        '
-        Me.PnBaseSubVentanas.BackColor = System.Drawing.Color.AliceBlue
-        Me.PnBaseSubVentanas.Location = New System.Drawing.Point(21, 80)
-        Me.PnBaseSubVentanas.Name = "PnBaseSubVentanas"
-        Me.PnBaseSubVentanas.Size = New System.Drawing.Size(915, 640)
-        Me.PnBaseSubVentanas.TabIndex = 0
-        '
         'BtnSalir
         '
         Me.BtnSalir.BackgroundImage = CType(resources.GetObject("BtnSalir.BackgroundImage"), System.Drawing.Image)
@@ -354,6 +346,14 @@ Partial Class Home
         Me.BtnSalir.Size = New System.Drawing.Size(78, 62)
         Me.BtnSalir.TabIndex = 4
         Me.BtnSalir.UseVisualStyleBackColor = True
+        '
+        'PnBaseSubVentanas
+        '
+        Me.PnBaseSubVentanas.BackColor = System.Drawing.Color.AliceBlue
+        Me.PnBaseSubVentanas.Location = New System.Drawing.Point(21, 80)
+        Me.PnBaseSubVentanas.Name = "PnBaseSubVentanas"
+        Me.PnBaseSubVentanas.Size = New System.Drawing.Size(915, 640)
+        Me.PnBaseSubVentanas.TabIndex = 0
         '
         'Home
         '
