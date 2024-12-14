@@ -1,15 +1,15 @@
-﻿Public Class FrmCatalogoProductos_Nuevo
+﻿Public Class FrmCatalogoProductos_Actualizar
 
     ' Instancia Statica para garantizar una sola Instancia de la clase
-    Private Shared _Singleton As FrmCatalogoProductos_Nuevo
+    Private Shared _Singleton As FrmCatalogoProductos_Actualizar
 
     ' Propiedad para obtener la instancia única
-    Public Shared ReadOnly Property InstanciaCatalogoProductos_Nuevo As FrmCatalogoProductos_Nuevo
+    Public Shared ReadOnly Property InstanciaCatalogoProductos_Actualizar As FrmCatalogoProductos_Actualizar
         Get
             ' Si la instancia estatica es nula o fue eliminada entonces
             If _Singleton Is Nothing OrElse _Singleton.IsDisposed Then
                 ' Se crea una nueva instancia
-                _Singleton = New FrmCatalogoProductos_Nuevo()
+                _Singleton = New FrmCatalogoProductos_Actualizar()
             End If
             ' finalmente se retorna la instnacia activa o nueva
             Return _Singleton
@@ -22,8 +22,7 @@
         InitializeComponent()
     End Sub
 
-
-    Private Sub FrmCatalogoProductos_Nuevo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmCatalogoProductos_Actualizar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         '/*==================COLOR INICIAL DE PANELES PRINCIPALES DE FONDO=========================*/
         Me.BackColor = Color.FromArgb(247, 253, 232) ' #f7fde8 - Color de fondo
         LbTituloForm.ForeColor = Color.FromArgb(10, 73, 134) ' #0a4986 - Titulo Superior
@@ -40,11 +39,11 @@
         TbAlmacenProducto.ForeColor = Color.FromArgb(10, 73, 134) ' #0a4986 - Color de letra
         TbUbicacionProducto.ForeColor = Color.FromArgb(10, 73, 134) ' #0a4986 - Color de letra
         TbDescripcionProductos.ForeColor = Color.FromArgb(10, 73, 134) ' #0a4986 - Color de letra
-        CbCategoriaProducto.BackColor = Color.FromArgb(0, 151, 178) ' #0097b2 Color de Fondo del ComboBox Categorias
+        CbCategoriaProducto.BackColor = Color.FromArgb(255, 105, 135) ' #0097b2 Color de Fondo del ComboBox Categorias
         CbCategoriaProducto.ForeColor = Color.FromArgb(255, 255, 255) ' #0097b2 Color de Letra del ComboBox Categorias
-        CbMarcasProductos.BackColor = Color.FromArgb(0, 151, 178) ' #0097b2 Color de Fondo del ComboBox Marcas
+        CbMarcasProductos.BackColor = Color.FromArgb(255, 105, 135) ' #0097b2 Color de Fondo del ComboBox Marcas
         CbMarcasProductos.ForeColor = Color.FromArgb(255, 255, 255) ' #0097b2 Color de Letra del ComboBox Marcas
-        CbProveedores.BackColor = Color.FromArgb(0, 151, 178) ' #0097b2 Color de Fondo del ComboBox Proveedores
+        CbProveedores.BackColor = Color.FromArgb(255, 105, 135) ' #0097b2 Color de Fondo del ComboBox Proveedores
         CbProveedores.ForeColor = Color.FromArgb(255, 255, 255) ' #0097b2 Color de Letra del ComboBox Proveedores
         CbProveedores.ForeColor = Color.FromArgb(255, 255, 255) ' #0097b2 Color de Letra del ComboBox Proveedores
 
@@ -61,11 +60,16 @@
         DAOProveedorProducto.LlenarComboBox(CbProveedores) ' Agregamos Proveedores al ComboBox
 
 
-        '/*==================TEXTO INICIAL DE TEXTBOX=========================*/
-        TbNombreProductos.Text = "Nombre del Producto"
-        TbAlmacenProducto.Text = "Almacen del Producto"
-        TbUbicacionProducto.Text = "Ubicacion del Producto"
-        TbDescripcionProductos.Text = "Descripcion del Producto"
+
+        '/*==================TEXTO INICIAL DE TEXTBOX Y COMBOBOX=========================*/
+        TbNombreProductos.Text = ProductoGlobal.Nombre
+        TbAlmacenProducto.Text = ProductoGlobal.Almacen
+        TbUbicacionProducto.Text = ProductoGlobal.Ubicacion
+        TbDescripcionProductos.Text = ProductoGlobal.Descripcion
+        CbCategoriaProducto.SelectedValue = ProductoGlobal.IdCategoria 'Cambia el valor del Cbox al que el usuario selecciono en el formulario anterior
+        CbMarcasProductos.SelectedValue = ProductoGlobal.IdMarca
+        CbProveedores.SelectedValue = ProductoGlobal.IdProveedor
+
     End Sub
 
     '/*===============INSTANCIA DE CLASES PARA COMBOBOX=====================*/
@@ -73,6 +77,7 @@
     Dim DAOMarcasProductos As New DAOMarcaProductos()
     Dim DAOProveedorProducto As New DAOProveedorProducto()
     Dim DAOCatalogoProductos As New DAOCatalogoProducto()
+    Dim Id As Integer = Nothing
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Dim RegProducto As New Productos()
@@ -84,14 +89,14 @@
         RegProducto.IdCategoria = CInt(CbCategoriaProducto.SelectedValue)
         RegProducto.IdMarca = CInt(CbMarcasProductos.SelectedValue)
         RegProducto.IdProveedor = CInt(CbProveedores.SelectedValue)
-        RegProducto.Activo = 1
-        RegProducto.IdUsuarioRegistro = 1
+        RegProducto.IdUsuarioActualiza = 1
 
-        DAOCatalogoProductos.InsertarProducto(RegProducto.Nombre, RegProducto.Descripcion, RegProducto.Almacen, RegProducto.Ubicacion, RegProducto.IdCategoria, RegProducto.IdMarca, RegProducto.IdProveedor, RegProducto.Activo, RegProducto.IdUsuarioRegistro)
+        DAOCatalogoProductos.ActualizarProducto(RegProducto.Nombre, RegProducto.Descripcion, RegProducto.Almacen, RegProducto.Ubicacion, RegProducto.IdCategoria, RegProducto.IdMarca, RegProducto.IdProveedor, RegProducto.IdUsuarioActualiza, ProductoGlobal.IdProducto)
         MessageBox.Show("Valores guardados correctamente", "Nuevo Categoria Agregada", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         OpenDoor = 0
         Dim formCatalogoProductos As FrmCatalogoProductos = FrmCatalogoProductos.InstanciaCatalogoProductos
+        DAOCatalogoProductos.LlenarGrid(formCatalogoProductos.DgvVW_Productos)
         Me.Dispose()
         formCatalogoProductos.Show()
     End Sub
@@ -103,6 +108,4 @@
         Me.Dispose()
         formCatalogoProductos.Show()
     End Sub
-
-
 End Class

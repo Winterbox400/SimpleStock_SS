@@ -43,6 +43,7 @@ Partial Class Home
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PnPrincipalDerecho = New System.Windows.Forms.Panel()
         Me.PnBaseSubVentanas = New System.Windows.Forms.Panel()
+        Me.BtnSalir = New System.Windows.Forms.Button()
         Me.PnLogoUsuario.SuspendLayout()
         CType(Me.PbMascota, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnBotonesIzquierdos.SuspendLayout()
@@ -326,6 +327,7 @@ Partial Class Home
         'PnPrincipalDerecho
         '
         Me.PnPrincipalDerecho.BackColor = System.Drawing.Color.DodgerBlue
+        Me.PnPrincipalDerecho.Controls.Add(Me.BtnSalir)
         Me.PnPrincipalDerecho.Controls.Add(Me.PnBaseSubVentanas)
         Me.PnPrincipalDerecho.Location = New System.Drawing.Point(399, 0)
         Me.PnPrincipalDerecho.Name = "PnPrincipalDerecho"
@@ -339,6 +341,19 @@ Partial Class Home
         Me.PnBaseSubVentanas.Name = "PnBaseSubVentanas"
         Me.PnBaseSubVentanas.Size = New System.Drawing.Size(915, 640)
         Me.PnBaseSubVentanas.TabIndex = 0
+        '
+        'BtnSalir
+        '
+        Me.BtnSalir.BackgroundImage = CType(resources.GetObject("BtnSalir.BackgroundImage"), System.Drawing.Image)
+        Me.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnSalir.FlatAppearance.BorderSize = 0
+        Me.BtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSalir.Location = New System.Drawing.Point(857, 9)
+        Me.BtnSalir.Name = "BtnSalir"
+        Me.BtnSalir.Size = New System.Drawing.Size(78, 62)
+        Me.BtnSalir.TabIndex = 4
+        Me.BtnSalir.UseVisualStyleBackColor = True
         '
         'Home
         '
@@ -383,4 +398,5 @@ Partial Class Home
     Friend WithEvents BtnVerStock As Button
     Friend WithEvents PnBaseSubVentanas As Panel
     Friend WithEvents BtnClientes As Button
+    Friend WithEvents BtnSalir As Button
 End Class

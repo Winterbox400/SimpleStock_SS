@@ -82,8 +82,10 @@
     <Compile Include="Modelos\Categoria.vb" />
     <Compile Include="Modelos\Cliente.vb" />
     <Compile Include="Modelos\Marcas.vb" />
+    <Compile Include="Modelos\Productos.vb" />
     <Compile Include="Modelos\Proveedor.vb" />
     <Compile Include="Utilidades\ModObjectForm.vb" />
+    <Compile Include="Utilidades\VariablesGlobales.vb" />
     <Compile Include="VisualForms\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +113,12 @@
       <DependentUpon>FrmCatalogoProductos.vb</DependentUpon>
     </Compile>
     <Compile Include="VisualForms\FrmCatalogoProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualForms\FrmCatalogoProductos_Actualizar.Designer.vb">
+      <DependentUpon>FrmCatalogoProductos_Actualizar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VisualForms\FrmCatalogoProductos_Actualizar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VisualForms\FrmCatalogoProductos_Nuevo.Designer.vb">
@@ -159,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VisualForms\FrmCatalogoProductos.resx">
       <DependentUpon>FrmCatalogoProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualForms\FrmCatalogoProductos_Actualizar.resx">
+      <DependentUpon>FrmCatalogoProductos_Actualizar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VisualForms\FrmCatalogoProductos_Nuevo.resx">
       <DependentUpon>FrmCatalogoProductos_Nuevo.vb</DependentUpon>

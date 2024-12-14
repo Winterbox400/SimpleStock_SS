@@ -1,0 +1,8 @@
+BUG ACTUALIZAR PRODUCTOS SIN SELECCIONAR UN VALOR EN LOS COMBOBOX
+
+El Formulario FrmCatalogoProductos tiene 3 botones principales, uno de ellos es el actualizar productos; este sirve para cambiar datos de un registro previamente creado seleccionándolo del DataGridView, que nos redirigirá al formulario llamado FrmCatalogoProductos_Actualizar, que cuenta con un botton llamado Actualizar, este tiene la función de confirmar la acción de actualizar el registro.
+
+El bug radica en que al querer actualizar un registro sin antes haber cambiado los valores de los ComboBox, estos quedaran con el valor inicial quien posee ID = BDNull, en otras palabras no posee un Id valido para la base de datos, ni tampoco podrá pasarle el registro a RegProducto.IdCategoria en adelante, porque este valor no permite la asignación de BDNull:
+
+adjunto imágenes
+

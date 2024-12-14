@@ -60,7 +60,7 @@ Public Class DAOCatalogoProducto
                 command.Parameters.AddWithValue("@idCategoria", idCategoria)
                 command.Parameters.AddWithValue("@idMarca", idMarca)
                 command.Parameters.AddWithValue("@idProveedor", idProveedor)
-                command.Parameters.AddWithValue("@idUsuarioRegistro", idUsuarioActualiza)
+                command.Parameters.AddWithValue("@idUsuarioActualiza", idUsuarioActualiza)
                 command.Parameters.AddWithValue("@idProducto", idProducto)
 
 
@@ -103,5 +103,36 @@ Public Class DAOCatalogoProducto
         End Try
     End Sub
 
+    ' Metodo para llenar DataGridView con una Vista de Marcas desde la Base de Datos
+    Public Sub LlenarGrid(dataGridView As DataGridView)
+        Try
+            ' Abrimos la conexión
+            Conn.OpenConnection()
 
+            Dim query As String = "SELECT * FROM vw_CatalogoProductos"
+
+            Dim adaptador As New SqlDataAdapter(query, Conn.Conexion) 'Adaptamos la consulta con la conexión
+            Dim dataTable As New DataTable() 'Creamos un tabla de datos con la consulta
+
+            adaptador.Fill(dataTable) 'Llenamos el dataTable con la consulta
+
+            ' Asignar el DataTable como fuente de datos del DataGridView
+            dataGridView.DataSource = dataTable
+
+            ' Ocultar la columna "Codigo" (IdMarca)
+            If dataGridView.Columns.Contains("Descripcion") And dataGridView.Columns.Contains("IdCategoria") And dataGridView.Columns.Contains("IdMarca") And dataGridView.Columns.Contains("IdProveedore") Then
+                dataGridView.Columns("Descripcion").Visible = False
+                dataGridView.Columns("IdCategoria").Visible = False
+                dataGridView.Columns("IdMarca").Visible = False
+                dataGridView.Columns("IdProveedore").Visible = False
+            End If
+        Catch ex As Exception
+            ' Manejar errores
+            MessageBox.Show("Error al llenar el grid: " & ex.Message)
+        Finally
+            'Cerramos la conexión
+            Conn.CloseConnection()
+        End Try
+
+    End Sub
 End Class

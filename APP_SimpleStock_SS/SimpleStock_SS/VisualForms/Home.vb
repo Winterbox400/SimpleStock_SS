@@ -30,11 +30,12 @@
         FrmClientes.InstanciaClientes.Hide()
         FrmCatalogoProductos.InstanciaCatalogoProductos.Hide()
 
-        Dim formMarca As FrmMarcaProductos = FrmMarcaProductos.InstanciaMarcaProductos 'Crea una variable de la instancia singleton
-        formMarca.Owner = Me 'Hace a la instancia del Formulario Marca Productos hija de Home
-        formMarca.Show() ' Muestra el formulario en la pantalla
-        formMarca.BringToFront() ' Manda el formulario enfrente del padre (Home)
-
+        If OpenDoor = 0 Then
+            Dim formMarca As FrmMarcaProductos = FrmMarcaProductos.InstanciaMarcaProductos 'Crea una variable de la instancia singleton
+            formMarca.Owner = Me 'Hace a la instancia del Formulario Marca Productos hija de Home
+            formMarca.Show() ' Muestra el formulario en la pantalla
+            formMarca.BringToFront() ' Manda el formulario enfrente del padre (Home)
+        End If
     End Sub
 
     Private Sub BtnProveedoresProductos_Click(sender As Object, e As EventArgs) Handles BtnProveedoresProductos.Click
@@ -43,10 +44,12 @@
         FrmClientes.InstanciaClientes.Hide()
         FrmCatalogoProductos.InstanciaCatalogoProductos.Hide()
 
-        Dim formProveedor As FrmProveedoresProductos = FrmProveedoresProductos.InstanciaProveedorProducto 'Crea una variable de la instancia singleton
-        formProveedor.Owner = Me 'Hace a la instancia del Formulario Proveedor Productos hija de Home
-        formProveedor.Show() ' Muestra el formulario en la pantalla
-        formProveedor.BringToFront() ' Manda el formulario enfrente del padre (Home)
+        If OpenDoor = 0 Then
+            Dim formProveedor As FrmProveedoresProductos = FrmProveedoresProductos.InstanciaProveedorProducto 'Crea una variable de la instancia singleton
+            formProveedor.Owner = Me 'Hace a la instancia del Formulario Proveedor Productos hija de Home
+            formProveedor.Show() ' Muestra el formulario en la pantalla
+            formProveedor.BringToFront() ' Manda el formulario enfrente del padre (Home)
+        End If
     End Sub
 
 
@@ -56,10 +59,12 @@
         FrmClientes.InstanciaClientes.Hide()
         FrmCatalogoProductos.InstanciaCatalogoProductos.Hide()
 
-        Dim formCategoria As FrmCategoriaProductos = FrmCategoriaProductos.InstanciaCategoriaProductos 'Crea una variable de la instancia singleton
-        formCategoria.Owner = Me 'Hace a la instancia del Formulario Proveedor Productos hija de Home
-        formCategoria.Show() ' Muestra el formulario en la pantalla
-        formCategoria.BringToFront() ' Manda el formulario enfrente del padre (Home)
+        If OpenDoor = 0 Then
+            Dim formCategoria As FrmCategoriaProductos = FrmCategoriaProductos.InstanciaCategoriaProductos 'Crea una variable de la instancia singleton
+            formCategoria.Owner = Me 'Hace a la instancia del Formulario Proveedor Productos hija de Home
+            formCategoria.Show() ' Muestra el formulario en la pantalla
+            formCategoria.BringToFront() ' Manda el formulario enfrente del padre (Home)
+        End If
     End Sub
 
     Private Sub BtnClientes_Click(sender As Object, e As EventArgs) Handles BtnClientes.Click
@@ -68,10 +73,14 @@
         FrmProveedoresProductos.InstanciaProveedorProducto.Hide()
         FrmCatalogoProductos.InstanciaCatalogoProductos.Hide()
 
-        Dim formClientes As FrmClientes = FrmClientes.InstanciaClientes 'Crea una variable de la instancia singleton
-        formClientes.Owner = Me 'Hace a la instancia del Formulario Proveedor Productos hija de Home
-        formClientes.Show() ' Muestra el formulario en la pantalla
-        formClientes.BringToFront() ' Manda el formulario enfrente del padre (Home)
+        If OpenDoor = 0 Then
+
+            Dim formClientes As FrmClientes = FrmClientes.InstanciaClientes 'Crea una variable de la instancia singleton
+            formClientes.Owner = Me 'Hace a la instancia del Formulario Proveedor Productos hija de Home
+            formClientes.Show() ' Muestra el formulario en la pantalla
+            formClientes.BringToFront() ' Manda el formulario enfrente del padre (Home)
+        End If
+
     End Sub
 
     Private Sub BtnCatalogoProductos_Click(sender As Object, e As EventArgs) Handles BtnCatalogoProductos.Click
@@ -80,9 +89,19 @@
         FrmProveedoresProductos.InstanciaProveedorProducto.Hide()
         FrmClientes.InstanciaClientes.Hide()
 
-        Dim formCatalogoProductos As FrmCatalogoProductos = FrmCatalogoProductos.InstanciaCatalogoProductos 'Crea una variable de la instancia singleton
-        formCatalogoProductos.Owner = Me 'Hace a la instancia del Formulario Proveedor Productos hija de Home
-        formCatalogoProductos.Show() ' Muestra el formulario en la pantalla
-        formCatalogoProductos.BringToFront() ' Manda el formulario enfrente del padre (Home)
+        If OpenDoor = 0 Then
+            Dim formCatalogoProductos As FrmCatalogoProductos = FrmCatalogoProductos.InstanciaCatalogoProductos 'Crea una variable de la instancia singleton
+            formCatalogoProductos.Owner = Me 'Hace a la instancia del Formulario Proveedor Productos hija de Home
+            formCatalogoProductos.Show() ' Muestra el formulario en la pantalla
+            formCatalogoProductos.BringToFront() ' Manda el formulario enfrente del padre (Home)
+        End If
+
+    End Sub
+
+    Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
+        Dim result As DialogResult = MessageBox.Show("¿Estás seguro de que deseas salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If result = DialogResult.Yes Then
+            Application.Exit()
+        End If
     End Sub
 End Class

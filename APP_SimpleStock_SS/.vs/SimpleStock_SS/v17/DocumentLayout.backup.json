@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|c:\\winterbox400\\proyectosserios\\repositoriosimplestock_ss\\app_simplestock_ss\\simplestock_ss\\dao\\daocategoriaproducto.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\dao\\daocategoriaproducto.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|c:\\winterbox400\\proyectosserios\\repositoriosimplestock_ss\\app_simplestock_ss\\simplestock_ss\\visualforms\\home.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\visualforms\\home.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\simplestock_ss\\visualforms\\frmcatalogoproductos_nuevo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\visualforms\\frmcatalogoproductos_nuevo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|c:\\winterbox400\\proyectosserios\\repositoriosimplestock_ss\\app_simplestock_ss\\simplestock_ss\\visualforms\\home.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\visualforms\\home.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\simplestock_ss\\dao\\daomarcaproductos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\dao\\daomarcaproductos.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|c:\\winterbox400\\proyectosserios\\repositoriosimplestock_ss\\app_simplestock_ss\\simplestock_ss\\visualforms\\frmclientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\visualforms\\frmclientes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\simplestock_ss\\dao\\daoproveedorproducto.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\dao\\daoproveedorproducto.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\simplestock_ss\\utilidades\\variablesglobales.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C6E3574D-9C0E-403B-898C-7ED2353330B9}|SimpleStock_SS\\SimpleStock_SS.vbproj|solutionrelative:simplestock_ss\\utilidades\\variablesglobales.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DAOProveedorProducto.vb",
-              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\DAO\\DAOProveedorProducto.vb",
-              "RelativeDocumentMoniker": "SimpleStock_SS\\DAO\\DAOProveedorProducto.vb",
-              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\DAO\\DAOProveedorProducto.vb",
-              "RelativeToolTip": "SimpleStock_SS\\DAO\\DAOProveedorProducto.vb",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAmwIkAAAA3AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Home.vb",
+              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\Home.vb",
+              "RelativeDocumentMoniker": "SimpleStock_SS\\VisualForms\\Home.vb",
+              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\Home.vb",
+              "RelativeToolTip": "SimpleStock_SS\\VisualForms\\Home.vb",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAqwGcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-11-29T06:44:12.01Z",
+              "WhenOpened": "2024-12-14T05:41:17.232Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DAOMarcaProductos.vb",
-              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\DAO\\DAOMarcaProductos.vb",
-              "RelativeDocumentMoniker": "SimpleStock_SS\\DAO\\DAOMarcaProductos.vb",
-              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\DAO\\DAOMarcaProductos.vb",
-              "RelativeToolTip": "SimpleStock_SS\\DAO\\DAOMarcaProductos.vb",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAcwHsAAAAAAAAAAAAAAA==",
+              "Title": "FrmClientes.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\FrmClientes.vb",
+              "RelativeDocumentMoniker": "SimpleStock_SS\\VisualForms\\FrmClientes.vb",
+              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\FrmClientes.vb [Dise\u00F1o]",
+              "RelativeToolTip": "SimpleStock_SS\\VisualForms\\FrmClientes.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-11-29T06:30:39.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DAOCategoriaProducto.vb",
-              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\DAO\\DAOCategoriaProducto.vb",
-              "RelativeDocumentMoniker": "SimpleStock_SS\\DAO\\DAOCategoriaProducto.vb",
-              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\DAO\\DAOCategoriaProducto.vb",
-              "RelativeToolTip": "SimpleStock_SS\\DAO\\DAOCategoriaProducto.vb",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAIwJoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-11-29T06:30:38.104Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-14T05:39:25.174Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FrmCatalogoProductos_Nuevo.vb",
-              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\FrmCatalogoProductos_Nuevo.vb",
-              "RelativeDocumentMoniker": "SimpleStock_SS\\VisualForms\\FrmCatalogoProductos_Nuevo.vb",
-              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\FrmCatalogoProductos_Nuevo.vb",
-              "RelativeToolTip": "SimpleStock_SS\\VisualForms\\FrmCatalogoProductos_Nuevo.vb",
-              "ViewState": "AgIAACkAAAAAAAAAAAAwwEIAAAA7AAAAAAAAAA==",
+              "Title": "Home.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\Home.vb",
+              "RelativeDocumentMoniker": "SimpleStock_SS\\VisualForms\\Home.vb",
+              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\VisualForms\\Home.vb [Dise\u00F1o]",
+              "RelativeToolTip": "SimpleStock_SS\\VisualForms\\Home.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-11-28T17:03:25.024Z",
+              "WhenOpened": "2024-12-14T05:39:12.772Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VariablesGlobales.vb",
+              "DocumentMoniker": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\Utilidades\\VariablesGlobales.vb",
+              "RelativeDocumentMoniker": "SimpleStock_SS\\Utilidades\\VariablesGlobales.vb",
+              "ToolTip": "C:\\winterbox400\\ProyectosSerios\\RepositorioSimpleStock_SS\\APP_SimpleStock_SS\\SimpleStock_SS\\Utilidades\\VariablesGlobales.vb",
+              "RelativeToolTip": "SimpleStock_SS\\Utilidades\\VariablesGlobales.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA6wAYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-12-14T04:29:05.471Z",
               "EditorCaption": ""
             }
           ]

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class FrmCatalogoProductos_Nuevo
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class FrmCatalogoProductos_Actualizar
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,12 +20,11 @@ Partial Class FrmCatalogoProductos_Nuevo
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCatalogoProductos_Nuevo))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCatalogoProductos_Actualizar))
         Me.PnConteinerPrincipal = New System.Windows.Forms.Panel()
         Me.LbTituloForm = New System.Windows.Forms.Label()
-        Me.BtnBackForm = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.CbProveedores = New System.Windows.Forms.ComboBox()
         Me.CbMarcasProductos = New System.Windows.Forms.ComboBox()
@@ -38,6 +37,7 @@ Partial Class FrmCatalogoProductos_Nuevo
         Me.TbAlmacenProducto = New System.Windows.Forms.TextBox()
         Me.PnNombreProductos = New System.Windows.Forms.Panel()
         Me.TbNombreProductos = New System.Windows.Forms.TextBox()
+        Me.BtnBackForm = New System.Windows.Forms.Button()
         Me.PnConteinerPrincipal.SuspendLayout()
         Me.PnDescripcionProductos.SuspendLayout()
         Me.PnUbicacionProducto.SuspendLayout()
@@ -48,8 +48,8 @@ Partial Class FrmCatalogoProductos_Nuevo
         'PnConteinerPrincipal
         '
         Me.PnConteinerPrincipal.BackColor = System.Drawing.SystemColors.ButtonShadow
-        Me.PnConteinerPrincipal.Controls.Add(Me.LbTituloForm)
         Me.PnConteinerPrincipal.Controls.Add(Me.BtnBackForm)
+        Me.PnConteinerPrincipal.Controls.Add(Me.LbTituloForm)
         Me.PnConteinerPrincipal.Controls.Add(Me.BtnGuardar)
         Me.PnConteinerPrincipal.Controls.Add(Me.CbProveedores)
         Me.PnConteinerPrincipal.Controls.Add(Me.CbMarcasProductos)
@@ -61,7 +61,7 @@ Partial Class FrmCatalogoProductos_Nuevo
         Me.PnConteinerPrincipal.Location = New System.Drawing.Point(12, 28)
         Me.PnConteinerPrincipal.Name = "PnConteinerPrincipal"
         Me.PnConteinerPrincipal.Size = New System.Drawing.Size(891, 588)
-        Me.PnConteinerPrincipal.TabIndex = 8
+        Me.PnConteinerPrincipal.TabIndex = 9
         '
         'LbTituloForm
         '
@@ -72,19 +72,6 @@ Partial Class FrmCatalogoProductos_Nuevo
         Me.LbTituloForm.Size = New System.Drawing.Size(766, 75)
         Me.LbTituloForm.TabIndex = 5
         Me.LbTituloForm.Text = "FORMULARIO NUEVO PRODUCTO"
-        '
-        'BtnBackForm
-        '
-        Me.BtnBackForm.BackgroundImage = CType(resources.GetObject("BtnBackForm.BackgroundImage"), System.Drawing.Image)
-        Me.BtnBackForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnBackForm.FlatAppearance.BorderSize = 0
-        Me.BtnBackForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BtnBackForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnBackForm.Location = New System.Drawing.Point(21, 510)
-        Me.BtnBackForm.Name = "BtnBackForm"
-        Me.BtnBackForm.Size = New System.Drawing.Size(103, 64)
-        Me.BtnBackForm.TabIndex = 4
-        Me.BtnBackForm.UseVisualStyleBackColor = True
         '
         'BtnGuardar
         '
@@ -215,7 +202,20 @@ Partial Class FrmCatalogoProductos_Nuevo
         Me.TbNombreProductos.TabIndex = 0
         Me.TbNombreProductos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'FrmCatalogoProductos_Nuevo
+        'BtnBackForm
+        '
+        Me.BtnBackForm.BackgroundImage = CType(resources.GetObject("BtnBackForm.BackgroundImage"), System.Drawing.Image)
+        Me.BtnBackForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnBackForm.FlatAppearance.BorderSize = 0
+        Me.BtnBackForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnBackForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnBackForm.Location = New System.Drawing.Point(21, 510)
+        Me.BtnBackForm.Name = "BtnBackForm"
+        Me.BtnBackForm.Size = New System.Drawing.Size(103, 64)
+        Me.BtnBackForm.TabIndex = 10
+        Me.BtnBackForm.UseVisualStyleBackColor = True
+        '
+        'FrmCatalogoProductos_Actualizar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -223,9 +223,9 @@ Partial Class FrmCatalogoProductos_Nuevo
         Me.Controls.Add(Me.PnConteinerPrincipal)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Location = New System.Drawing.Point(420, 80)
-        Me.Name = "FrmCatalogoProductos_Nuevo"
+        Me.Name = "FrmCatalogoProductos_Actualizar"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
-        Me.Text = "FrmCatalogoProductos_Nuevo"
+        Me.Text = "FrmCatalogoProductos_Actualizar"
         Me.PnConteinerPrincipal.ResumeLayout(False)
         Me.PnConteinerPrincipal.PerformLayout()
         Me.PnDescripcionProductos.ResumeLayout(False)
@@ -241,18 +241,18 @@ Partial Class FrmCatalogoProductos_Nuevo
     End Sub
 
     Friend WithEvents PnConteinerPrincipal As Panel
+    Friend WithEvents LbTituloForm As Label
+    Friend WithEvents BtnGuardar As Button
+    Friend WithEvents CbProveedores As ComboBox
+    Friend WithEvents CbMarcasProductos As ComboBox
+    Friend WithEvents CbCategoriaProducto As ComboBox
     Friend WithEvents PnDescripcionProductos As Panel
     Friend WithEvents TbDescripcionProductos As TextBox
-    Friend WithEvents PnNombreProductos As Panel
-    Friend WithEvents TbNombreProductos As TextBox
-    Friend WithEvents CbCategoriaProducto As ComboBox
     Friend WithEvents PnUbicacionProducto As Panel
     Friend WithEvents TbUbicacionProducto As TextBox
     Friend WithEvents PnAlmacenProducto As Panel
     Friend WithEvents TbAlmacenProducto As TextBox
-    Friend WithEvents CbProveedores As ComboBox
-    Friend WithEvents CbMarcasProductos As ComboBox
-    Friend WithEvents BtnGuardar As Button
-    Friend WithEvents LbTituloForm As Label
+    Friend WithEvents PnNombreProductos As Panel
+    Friend WithEvents TbNombreProductos As TextBox
     Friend WithEvents BtnBackForm As Button
 End Class

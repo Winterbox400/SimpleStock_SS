@@ -70,10 +70,14 @@ CREATE VIEW vw_CatalogoProductos AS
 SELECT
 P.IdProducto AS ID,
 P.Nombre AS Productos,
+P.Descripcion,
 P.Almacen,
 P.Ubicacion,
+P.IdCategoria,
 C.Nombre AS Categoria,
+P.IdMarca,
 M.Nombre AS Marca,
+P.IdProveedore,
 PE.Nombre AS Proveedor
 FROM Productos P
 INNER JOIN Categorias C ON P.IdCategoria = C.IdCategoria

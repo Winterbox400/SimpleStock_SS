@@ -66,8 +66,8 @@ GO
 
 
 /*CATEGORIAS*/
-SELECT * FROM Categorias
-GO
+--SELECT * FROM Categorias
+--GO
 
 --INSERT INTO Categorias(Nombre, Descripcion, Activo, IdUsuarioRegistro, FechaRegistro)
 --	VALUES	(@nombre, @descripcion, @activo, @idUsuarioRegistro, GETDATE())
@@ -103,4 +103,23 @@ GO
 --GO
 
 --UPDATE Clientes SET Activo = 1 WHERE IdCliente = 1
+--GO
+
+
+/*INSERSION DE CATALOGO PRODUCTOS*/
+USE BD_SimpleStock_SS
+GO
+SELECT * FROM Productos
+GO
+
+----Insersion Nuevo Producto
+--INSERT INTO Productos(Nombre, Descripcion, Almacen, Ubicacion, IdCategoria, IdMarca, IdProveedore, Activo, IdUsuarioRegistro, FechaRegistro)
+--	VALUES (@nombre, @descripcion, @almacen, @ubicacion, @idCategoria, @idMarca, @idProveedor, 1, @idUsuarioRegistro, GETDATE())
+--GO
+
+--UPDATE Productos SET Nombre = @nombre, Descripcion = @descripcion, Almacen = @almacen, Ubicacion = @ubicacion, IdCategoria = @idCategoria, IdMarca = @idMarca, IdProveedore = @idProveedor, Activo = 0, IdUsuarioActualiza = @idUsuarioActualiza, FechaActualizacion = GETDATE()
+--WHERE IdProducto = @idProducto
+--GO
+
+--UPDATE Productos SET Activo = @activo WHERE IdProducto = @idProducto
 --GO

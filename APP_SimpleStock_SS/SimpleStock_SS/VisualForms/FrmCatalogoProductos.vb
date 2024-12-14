@@ -48,16 +48,74 @@
         ModObjectForm.CrearPanelEsquinasSemiCirculares(PnNombreProductos, 10)
         ModObjectForm.CrearPanelEsquinasSemiCirculares(PnDescripcionProductos, 10)
 
+        '/*====================Valores Iniciales de los Objetos==============================*/
+        DAOCatalogoProductos.LlenarGrid(DgvVW_Productos)
+
+
     End Sub
 
-    Private Sub BtnCrearNuevoProducto_Click(sender As Object, e As EventArgs) Handles BtnCrearNuevoProducto.Click
 
+    '/*=================================ZONA DE BOTONES=========================*/
+    ' Variables y Objetos Utilies
+    Dim DAOCatalogoProductos As New DAOCatalogoProducto()
+    Dim RestriccionCambiar As Integer = 0
+
+    Private Sub BtnCrearNuevoProducto_Click(sender As Object, e As EventArgs) Handles BtnCrearNuevoProducto.Click
+        OpenDoor = 1
         Dim formCatalogoProductos_Nuevo As FrmCatalogoProductos_Nuevo = FrmCatalogoProductos_Nuevo.InstanciaCatalogoProductos_Nuevo 'Crea una variable de la instancia singleton
-        formCatalogoProductos_Nuevo.Owner = Me 'Hace a la instancia del Formulario Proveedor Productos hija de Home
+        formCatalogoProductos_Nuevo.Owner = Me 'Hace a la instancia del Formulario CatalogoProductos_Nuevo hija de CatalogoProducto
         formCatalogoProductos_Nuevo.Show() ' Muestra el formulario en la pantalla
-        formCatalogoProductos_Nuevo.BringToFront() ' Manda el formulario enfrente del padre (Home)
+        formCatalogoProductos_Nuevo.BringToFront() ' Manda el formulario enfrente del padre (CatalgoProducto)
 
         formCatalogoProductos_Nuevo.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub BtnCambiarProducto_Click(sender As Object, e As EventArgs) Handles BtnCambiarProducto.Click
+
+        If RestriccionCambiar = 0 Then
+            MessageBox.Show("No se ha seleccionado un Registro" & vbCrLf & " Pruebe seleccionando un producto de la tabla", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+
+
+        If RestriccionCambiar > 0 Then
+            OpenDoor = 1
+
+            Dim formCatalogoProductos_Actualizar As FrmCatalogoProductos_Actualizar = FrmCatalogoProductos_Actualizar.InstanciaCatalogoProductos_Actualizar
+            formCatalogoProductos_Actualizar.Owner = Me 'Hace la instancia del Formulario CatalogoProductos_Actualizar hija de CatalogoProducto
+            formCatalogoProductos_Actualizar.Show() ' Muestra el formulario en la pantalla
+            formCatalogoProductos_Actualizar.BringToFront() ' Manda el formulario enfrente del padre (CatalgoProducto)
+
+            formCatalogoProductos_Actualizar.Show()
+            Me.Hide()
+
+            RestriccionCambiar = 0
+        End If
+
+
+
+    End Sub
+
+    Private Sub BtnEliminarProducto_Click(sender As Object, e As EventArgs) Handles BtnEliminarProducto.Click
+
+    End Sub
+
+    Private Sub DgvVW_Productos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvVW_Productos.CellClick
+        '/*====Mostrar valores en TextBox de CatalogoProductos*/
+        TbNombreProductos.Text = DgvVW_Productos.SelectedCells(1).Value
+        TbDescripcionProductos.Text = DgvVW_Productos.SelectedCells(2).Value
+        RestriccionCambiar = DgvVW_Productos.SelectedCells(0).Value
+
+        '/*====Mostrar Valores en TextBox de CatalogoProductos_Actualizar*/
+        ProductoGlobal.IdProducto = DgvVW_Productos.SelectedCells(0).Value
+        ProductoGlobal.Nombre = DgvVW_Productos.SelectedCells(1).Value
+        ProductoGlobal.Descripcion = DgvVW_Productos.SelectedCells(2).Value
+        ProductoGlobal.Almacen = DgvVW_Productos.SelectedCells(3).Value
+        ProductoGlobal.Ubicacion = DgvVW_Productos.SelectedCells(4).Value
+        ProductoGlobal.IdCategoria = DgvVW_Productos.SelectedCells(5).Value
+        ProductoGlobal.IdMarca = DgvVW_Productos.SelectedCells(7).Value
+        ProductoGlobal.IdProveedor = DgvVW_Productos.SelectedCells(9).Value
+
+
     End Sub
 End Class
